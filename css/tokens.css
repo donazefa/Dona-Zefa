@@ -1,0 +1,136 @@
+:root {
+  /* ==========================================================================
+     DESIGN TOKENS — LIVRO DA VOVÓ ZEFA (DIREÇÃO DE ARTE NOBRE & EDITORIAL V2)
+     Estética: Casa de vó brasileira, sabedoria ancestral, livro antigo,
+     elementos de altar, luz de vela, madeira de lei, barro, linho cru e afeto.
+     ========================================================================== */
+
+  /* Cores Principais de Fundo e Texturas de Papel */
+  --color-bg-linen: #FAF4EB;            /* Linho pergaminho acolhedor */
+  --color-bg-linen-warm: #FDF8F0;       /* Marfim suave iluminado por vela */
+  --color-bg-parchment: #FFFDF7;        /* Papel artesanal pergaminho para cards */
+  --color-bg-parchment-alt: #F6EFE2;    /* Pergaminho envelhecido suave */
+  --color-bg-cream-rich: #FBF4E8;       /* Creme encorpado */
+  
+  /* Seções Escuras (Ambiente Noturno & Altar de Casa de Vó) */
+  --color-bg-dark-night: #130B06;       /* Café ancestral profundo */
+  --color-bg-dark-room: #1A1009;        /* Sala de estar à luz de velas */
+  --color-bg-dark-card: #24160E;        /* Madeira envelhecida / card escuro */
+  --color-bg-dark-card-hover: #2C1C12;  /* Madeira iluminada */
+  --color-bg-dark-border: rgba(212, 163, 89, 0.28);
+  --color-bg-dark-border-strong: rgba(232, 186, 104, 0.45);
+
+  /* Identidade & Barro / Terracota de Olaria */
+  --color-primary-terracotta: #92361A;  /* Terracota de barro tradicional */
+  --color-primary-hover: #752912;       /* Terracota escurecido de forno */
+  --color-primary-light: #F7ECE4;       /* Superfície suave terracota */
+  --color-primary-border: rgba(146, 54, 26, 0.26);
+
+  /* Ouro Envelhecido, Latão & Chama de Vela */
+  --color-gold-leaf: #C29038;           /* Folha de ouro envelhecido */
+  --color-gold-bright: #E8BA68;         /* Chama dourada de vela */
+  --color-gold-glow: #F5D38E;           /* Luz alta da chama */
+  --color-gold-dark: #7D5116;           /* Bronze / ouro antigo profundo */
+  --color-amber-light: #F7ECD7;         /* Âmbar suave de incenso e mel */
+  --color-candle-glow: rgba(232, 186, 104, 0.38);
+  --color-candle-halo: rgba(232, 186, 104, 0.16);
+
+  /* Cores de Texto (Acessibilidade Sênior WCAG AAA) */
+  --color-text-main: #24170E;           /* Café tostado profundo (contraste altíssimo) */
+  --color-text-muted: #645041;          /* Argila suave para leitura de apoio */
+  --color-text-on-dark: #FAF4EB;        /* Linho puro no fundo escuro */
+  --color-text-muted-on-dark: #D4C4B5;  /* Texto de apoio no fundo escuro */
+
+  /* Bordas Nobres, Filetes de Ouro & Cantoneiras */
+  --color-border-gold: rgba(194, 144, 56, 0.38);
+  --color-border-gold-strong: rgba(194, 144, 56, 0.72);
+  --color-border-subtle: rgba(100, 80, 65, 0.15);
+  --color-border-paper: rgba(194, 144, 56, 0.22);
+
+  /* Tipografia Literária e Tradicional */
+  --font-display: 'Cinzel', serif;
+  --font-serif: 'Cormorant Garamond', 'Lora', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Escala Tipográfica Confortável para Leitura Sênior */
+  --font-size-hero-title: clamp(2.15rem, 5.6vw, 3.15rem);   /* 34.4px - 50.4px */
+  --font-size-section-title: clamp(1.78rem, 4.5vw, 2.55rem);/* 28.5px - 40.8px */
+  --font-size-card-title: clamp(1.38rem, 3.5vw, 1.68rem);   /* 22px - 26.8px */
+  --font-size-body: 1.1875rem;                              /* 19px */
+  --font-size-lead: 1.3125rem;                              /* 21px */
+  --font-size-small: 1rem;                                  /* 16px */
+  --font-size-micro: 0.875rem;                              /* 14px */
+
+  --line-height-body: 1.76;
+  --line-height-heading: 1.22;
+
+  /* Espaçamentos Modulares */
+  --space-1: 0.25rem;   /* 4px */
+  --space-2: 0.5rem;    /* 8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-5: 1.25rem;   /* 20px */
+  --space-6: 1.5rem;    /* 24px */
+  --space-7: 1.75rem;   /* 28px */
+  --space-8: 2rem;      /* 32px */
+  --space-10: 2.5rem;   /* 40px */
+  --space-12: 3rem;     /* 48px */
+  --space-16: 4rem;     /* 64px */
+  --space-20: 5rem;     /* 80px */
+
+  /* Dimensões */
+  --container-max-width: 1100px;
+  --reading-max-width: 720px;
+  --min-touch-target: 60px;
+
+  /* Raios de Borda Artesanais */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-pill: 9999px;
+
+  /* Sombras Quentes de Madeira & Brilhos de Vela */
+  --shadow-sm: 0 3px 12px rgba(36, 23, 14, 0.05);
+  --shadow-md: 0 10px 28px rgba(36, 23, 14, 0.08);
+  --shadow-lg: 0 18px 45px rgba(36, 23, 14, 0.13);
+  --shadow-candle-intimate: 0 0 55px rgba(232, 186, 104, 0.28);
+  --shadow-gold-card: 0 12px 35px rgba(36, 23, 14, 0.08), 0 0 25px rgba(194, 144, 56, 0.2);
+  --shadow-revelation: 0 24px 60px rgba(146, 54, 26, 0.15), 0 0 55px rgba(232, 186, 104, 0.32);
+  --shadow-pressed: inset 0 2px 5px rgba(36, 23, 14, 0.12);
+
+  /* Transições Fluidas */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-glow: 0.5s ease-out;
+
+  /* ==========================================================================
+     TOKENS DA ETAPA 2 — TEXTURAS, CENOGRAFIA & PROFUNDIDADE
+     ========================================================================== */
+
+  /* Madeira Envelhecida & Veios */
+  --color-wood-deep: #1C0E06;
+  --color-wood-warm: #2A1A0F;
+  --color-wood-grain: rgba(194, 144, 56, 0.06);
+  --color-wood-highlight: rgba(232, 186, 104, 0.08);
+
+  /* Vinhetas & Profundidade de Seção */
+  --shadow-vignette-light: inset 0 60px 80px -40px rgba(36, 23, 14, 0.06), inset 0 -60px 80px -40px rgba(36, 23, 14, 0.06);
+  --shadow-vignette-warm: inset 0 80px 100px -50px rgba(36, 23, 14, 0.08), inset 0 -80px 100px -50px rgba(36, 23, 14, 0.08);
+  --shadow-vignette-dark: inset 0 100px 120px -50px rgba(0, 0, 0, 0.5), inset 0 -100px 120px -50px rgba(0, 0, 0, 0.5);
+
+  /* Iluminação de Vela Aprimorada */
+  --glow-candle-hero: radial-gradient(ellipse 70% 50% at 50% 15%, rgba(232, 186, 104, 0.22) 0%, transparent 100%);
+  --glow-candle-center: radial-gradient(circle at 50% 50%, rgba(232, 186, 104, 0.18) 0%, transparent 65%);
+  --glow-candle-top: radial-gradient(ellipse 80% 40% at 50% 0%, rgba(232, 186, 104, 0.20) 0%, transparent 100%);
+
+  /* Ornamentos & Decoração */
+  --ornament-gold: #C29038;
+  --ornament-gold-light: #E8BA68;
+  --ornament-gold-faded: rgba(194, 144, 56, 0.35);
+  --ornament-leaf-color: #8B7355;
+
+  /* Cantoneiras e Filetes */
+  --corner-size: 28px;
+  --corner-color: rgba(194, 144, 56, 0.45);
+  --corner-color-strong: rgba(194, 144, 56, 0.7);
+}

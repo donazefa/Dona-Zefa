@@ -1,0 +1,148 @@
+/* ==========================================================================
+   BASE & TIPOGRAFIA — LIVRO DA VOVÓ ZEFA (DIREÇÃO DE ARTE NOBRE & EDITORIAL)
+   ========================================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  color: var(--color-text-main);
+  background-color: var(--color-bg-linen);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Tipografia de Títulos Literários e Ancestrais */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  line-height: var(--line-height-heading);
+  color: var(--color-text-main);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  font-feature-settings: "kern" 1, "liga" 1, "dlig" 1;
+}
+
+h1 {
+  font-size: var(--font-size-hero-title);
+  margin-bottom: var(--space-4);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: var(--font-size-section-title);
+  margin-bottom: var(--space-4);
+  font-weight: 700;
+}
+
+h3 {
+  font-size: var(--font-size-card-title);
+  margin-bottom: var(--space-3);
+  font-weight: 600;
+}
+
+p {
+  margin-bottom: var(--space-4);
+  font-size: var(--font-size-body);
+  color: var(--color-text-main);
+}
+
+p.lead {
+  font-size: var(--font-size-lead);
+  line-height: 1.68;
+  font-weight: 500;
+}
+
+p.subheadline {
+  font-family: var(--font-serif);
+  font-size: clamp(1.3rem, 3.8vw, 1.6rem);
+  line-height: 1.45;
+  color: var(--color-primary-terracotta);
+  font-weight: 600;
+  font-style: italic;
+  margin-bottom: var(--space-5);
+}
+
+.text-gold {
+  color: var(--color-gold-leaf);
+}
+
+.text-terracotta {
+  color: var(--color-primary-terracotta);
+}
+
+strong {
+  font-weight: 700;
+  color: inherit;
+}
+
+em {
+  font-style: italic;
+  font-family: var(--font-serif);
+}
+
+/* Links */
+a {
+  color: var(--color-primary-terracotta);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-primary-hover);
+}
+
+/* Foco Acessível em Ouro */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 3px solid var(--color-gold-bright);
+  outline-offset: 4px;
+  border-radius: var(--radius-sm);
+}
+
+/* Imagens */
+img, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Utilitários */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.is-hidden {
+  display: none !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}

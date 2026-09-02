@@ -1,0 +1,357 @@
+/* ==========================================================================
+   TEXTURAS, ORNAMENTOS & CENOGRAFIA — LIVRO DA VOVÓ ZEFA (ETAPA 2)
+   Texturas táteis de papel, linho, madeira e elementos decorativos botânicos.
+   Tudo implementado em CSS puro para máxima performance.
+   ========================================================================== */
+
+/* ==========================================================================
+   1. TEXTURAS SVG INLINE — FIBRAS DE PAPEL & LINHO
+   ========================================================================== */
+
+/* Textura de Papel Vergê (fibras verticais sutis) */
+.texture-paper-verge::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='paper'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.04 0.9' numOctaves='5' seed='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23paper)' opacity='0.035'/%3E%3C/svg%3E");
+  z-index: 0;
+}
+
+/* Textura de Linho Natural (entrelaçamento de fibras) */
+.texture-linen::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.55;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='linen'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.65 0.65' numOctaves='4' seed='8' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23linen)' opacity='0.028'/%3E%3C/svg%3E");
+  z-index: 0;
+}
+
+/* Textura de Madeira Escura (veios horizontais) */
+.texture-wood-dark::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.6;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 600 600' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='wood'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.015 0.25' numOctaves='6' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23wood)' opacity='0.06'/%3E%3C/svg%3E");
+  z-index: 0;
+}
+
+/* Textura de Papel Antigo/Pergaminho (manchas orgânicas sutis) */
+.texture-parchment::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.45;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 500 500' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='parchment'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.035' numOctaves='5' seed='15' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.6 0 0 0 0 0.45 0 0 0 0 0.3 0 0 0 0.6 0'/%3E%3CfeBlend mode='multiply'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23parchment)' opacity='0.04'/%3E%3C/svg%3E");
+  z-index: 0;
+}
+
+/* Garantir que o conteúdo fique acima das texturas */
+.texture-paper-verge > *,
+.texture-linen > *,
+.texture-wood-dark > *,
+.texture-parchment > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ==========================================================================
+   2. BORDAS ESCURECIDAS ORGÂNICAS (BORDAS QUEIMADAS DE PAPEL ANTIGO)
+   ========================================================================== */
+.aged-edges::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  box-shadow:
+    inset 0 40px 60px -30px rgba(36, 23, 14, 0.07),
+    inset 0 -40px 60px -30px rgba(36, 23, 14, 0.07),
+    inset 40px 0 60px -30px rgba(36, 23, 14, 0.04),
+    inset -40px 0 60px -30px rgba(36, 23, 14, 0.04);
+}
+
+.section-dark .aged-edges::after,
+.section-dark.aged-edges::after {
+  box-shadow:
+    inset 0 60px 80px -30px rgba(0, 0, 0, 0.45),
+    inset 0 -60px 80px -30px rgba(0, 0, 0, 0.45),
+    inset 50px 0 70px -30px rgba(0, 0, 0, 0.25),
+    inset -50px 0 70px -30px rgba(0, 0, 0, 0.25);
+}
+
+/* ==========================================================================
+   3. DIVISORES ORNAMENTAIS BOTÂNICOS (ENTRE SEÇÕES)
+   ========================================================================== */
+.section-divider-botanical {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4) 0;
+  overflow: hidden;
+  background: transparent;
+  position: relative;
+  z-index: 2;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.section-divider-botanical svg {
+  width: 320px;
+  max-width: 80vw;
+  height: auto;
+  display: block;
+  opacity: 0.75;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.15));
+}
+
+@media (min-width: 768px) {
+  .section-divider-botanical svg {
+    width: 440px;
+    opacity: 0.85;
+  }
+}
+
+/* Transição Suave: Escuro (Hero/Madeira/Noite) -> Claro (Linho/Pergaminho) */
+.section-divider-botanical.transition-dark-to-light {
+  background: linear-gradient(180deg, #140A04 0%, #1F1007 22%, #4A2714 50%, #B89F82 82%, #FBF8F2 100%);
+  padding: clamp(28px, 4vw, 44px) 0;
+  box-shadow: inset 0 20px 30px -15px rgba(0, 0, 0, 0.6);
+}
+
+.section-divider-botanical.transition-dark-to-light svg {
+  color: var(--color-gold-bright, #E8BA68);
+  filter: drop-shadow(0 0 10px rgba(232, 186, 104, 0.55));
+  opacity: 0.95;
+}
+
+/* Transição Suave: Claro (Linho/Warm) -> Escuro (Noite/Madeira) */
+.section-divider-botanical.transition-light-to-dark {
+  background: linear-gradient(180deg, #FBF8F2 0%, #E8DEC9 18%, #4A2816 52%, #1C0F08 80%, #120A05 100%);
+  padding: clamp(28px, 4vw, 44px) 0;
+  box-shadow: inset 0 -20px 30px -15px rgba(0, 0, 0, 0.6);
+}
+
+.section-divider-botanical.transition-light-to-dark svg {
+  color: var(--color-gold-bright, #E8BA68);
+  filter: drop-shadow(0 0 10px rgba(232, 186, 104, 0.55));
+  opacity: 0.95;
+}
+
+/* Transição Suave: Escuro (Comunidade) -> Altar Iluminado (Seção 06 Produto) */
+.section-divider-botanical.transition-dark-to-altar {
+  background: linear-gradient(180deg, #120A05 0%, #29150B 25%, #5E351D 52%, #D2B792 82%, #F5ECD8 100%);
+  padding: clamp(26px, 3.8vw, 42px) 0;
+}
+
+.section-divider-botanical.transition-dark-to-altar svg {
+  color: var(--color-gold-bright, #E8BA68);
+  filter: drop-shadow(0 0 8px rgba(232, 186, 104, 0.45));
+  opacity: 0.95;
+}
+
+/* Transição Suave: Altar Iluminado (Seção 06) -> Linho Claro (Seção 07) */
+.section-divider-botanical.transition-altar-to-linen {
+  background: linear-gradient(180deg, #F5ECD8 0%, #F8F3E7 50%, #FBF8F2 100%);
+  padding: clamp(20px, 3vw, 32px) 0;
+}
+
+.section-divider-botanical.transition-altar-to-linen svg {
+  color: var(--ornament-gold, #C29038);
+  opacity: 0.75;
+}
+
+/* Variação suave para seções claras consecutivas */
+.section-divider-botanical.divider-light {
+  background: linear-gradient(180deg, rgba(251, 248, 242, 0.4) 0%, rgba(247, 241, 230, 0.8) 50%, rgba(251, 248, 242, 0.4) 100%);
+  padding: clamp(20px, 3vw, 32px) 0;
+}
+
+.section-divider-botanical.divider-light svg {
+  color: var(--ornament-gold, #C29038);
+  opacity: 0.8;
+}
+
+/* Variação escura (para transições entre fundos escuros) */
+.section-divider-botanical.divider-dark {
+  background: #120A05;
+  padding: clamp(20px, 3vw, 32px) 0;
+}
+
+.section-divider-botanical.divider-dark svg {
+  color: var(--color-gold-bright, #E8BA68);
+  opacity: 0.75;
+}
+
+/* ==========================================================================
+   4. CANTONEIRAS DE OURO PARA CARDS & MOLDURAS
+   ========================================================================== */
+
+/* Cantoneiras Grandes (para o offer-card e molduras) */
+.corner-ornaments {
+  position: relative;
+}
+
+.corner-ornaments::before,
+.corner-ornaments::after {
+  content: "";
+  position: absolute;
+  width: var(--corner-size);
+  height: var(--corner-size);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Cantos superiores */
+.corner-ornaments::before {
+  top: 12px;
+  left: 12px;
+  border-top: 2px solid var(--corner-color);
+  border-left: 2px solid var(--corner-color);
+}
+
+.corner-ornaments::after {
+  top: 12px;
+  right: 12px;
+  border-top: 2px solid var(--corner-color);
+  border-right: 2px solid var(--corner-color);
+}
+
+/* Cantos inferiores (via wrapper extra ou inner element) */
+.corner-ornaments-bottom::before,
+.corner-ornaments-bottom::after {
+  content: "";
+  position: absolute;
+  width: var(--corner-size);
+  height: var(--corner-size);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.corner-ornaments-bottom::before {
+  bottom: 12px;
+  left: 12px;
+  border-bottom: 2px solid var(--corner-color);
+  border-left: 2px solid var(--corner-color);
+}
+
+.corner-ornaments-bottom::after {
+  bottom: 12px;
+  right: 12px;
+  border-bottom: 2px solid var(--corner-color);
+  border-right: 2px solid var(--corner-color);
+}
+
+/* Versão Forte (para o card de oferta e hero) */
+.corner-ornaments-strong::before,
+.corner-ornaments-strong::after {
+  border-color: var(--corner-color-strong);
+  width: 32px;
+  height: 32px;
+}
+
+/* ==========================================================================
+   5. EFEITOS DE LUZ DE VELA VIVA
+   ========================================================================== */
+
+/* Halo de vela no topo da seção */
+.candle-glow-top::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 200px;
+  background: var(--glow-candle-top);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Halo de vela centralizado */
+.candle-glow-center::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 60%;
+  background: var(--glow-candle-center);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Brilho quente pulsante sutil (apenas se motion OK) */
+@keyframes candleFlicker {
+  0%, 100% { opacity: 0.6; }
+  25% { opacity: 0.72; }
+  50% { opacity: 0.58; }
+  75% { opacity: 0.68; }
+}
+
+.candle-flicker {
+  animation: candleFlicker 6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .candle-flicker {
+    animation: none !important;
+  }
+}
+
+/* ==========================================================================
+   6. FILETE DOURADO HORIZONTAL (SEPARADOR DE SEÇÕES)
+   ========================================================================== */
+.gold-rule {
+  width: 100%;
+  height: 1px;
+  border: none;
+  background: linear-gradient(90deg, transparent 5%, var(--ornament-gold-faded) 25%, var(--ornament-gold, #C29038) 50%, var(--ornament-gold-faded) 75%, transparent 95%);
+  margin: 0;
+  opacity: 0.7;
+}
+
+.gold-rule-thick {
+  height: 2px;
+  opacity: 0.6;
+}
+
+/* ==========================================================================
+   7. MOLDURA DE PÁGINA EDITORIAL (FILETE INTERNO DE SEÇÃO)
+   ========================================================================== */
+.editorial-frame {
+  position: relative;
+}
+
+.editorial-frame::before {
+  content: "";
+  position: absolute;
+  top: var(--space-6);
+  left: var(--space-5);
+  right: var(--space-5);
+  bottom: var(--space-6);
+  border: 1px solid rgba(194, 144, 56, 0.12);
+  border-radius: var(--radius-sm);
+  pointer-events: none;
+  z-index: 0;
+}
+
+@media (min-width: 768px) {
+  .editorial-frame::before {
+    top: var(--space-10);
+    left: var(--space-10);
+    right: var(--space-10);
+    bottom: var(--space-10);
+  }
+}
+
+/* Frame escuro para seções noturnas */
+.section-dark .editorial-frame::before {
+  border-color: rgba(232, 186, 104, 0.12);
+}

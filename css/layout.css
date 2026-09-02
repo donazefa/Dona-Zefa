@@ -1,0 +1,307 @@
+/* ==========================================================================
+   LAYOUT & CENOGRAFIA — LIVRO DA VOVÓ ZEFA (DIREÇÃO DE ARTE NOBRE & TEXTURAS)
+   Atmosfera: Casa de vó brasileira, luz de vela, linho, barro e papel antigo.
+   ========================================================================== */
+
+/* Containers Centrais */
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-5);
+  padding-right: var(--space-5);
+}
+
+.container-reading {
+  width: 100%;
+  max-width: var(--reading-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-5);
+  padding-right: var(--space-5);
+}
+
+/* Seções com Atmosfera Cenográfica */
+.section {
+  padding-top: var(--space-12);
+  padding-bottom: var(--space-12);
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding-top: var(--space-16);
+    padding-bottom: var(--space-16);
+  }
+}
+
+/* ==========================================================================
+   VARIAÇÕES CENOGRÁFICAS DE FUNDO — ETAPA 2 (TEXTURAS TÁTEIS REAIS)
+   Cada seção recebe profundidade cenográfica, texturas artesanais e
+   iluminação de vela mais presente e orgânica.
+   ========================================================================== */
+
+/* 0. HERO CINEMATOGRÁFICO — Atmosfera Noturna e Quente à Luz de Velas */
+.section-hero-cinematic {
+  background-color: #140A04;
+  background-image:
+    /* Halo dourado intenso sobre a Vovó Zefa e a vela */
+    radial-gradient(circle at 78% 45%, rgba(232, 186, 104, 0.32) 0%, rgba(194, 144, 56, 0.12) 45%, transparent 75%),
+    /* Luz âmbar difusa no lado do texto */
+    radial-gradient(circle at 25% 35%, rgba(232, 186, 104, 0.16) 0%, transparent 60%),
+    /* Toque de brasa terracota na base */
+    radial-gradient(ellipse 70% 35% at 50% 100%, rgba(158, 71, 42, 0.20) 0%, transparent 80%),
+    /* Textura de madeira rústica e veios escuros */
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 600 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='heroWood'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.012 0.22' numOctaves='6' seed='5' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23heroWood)' opacity='0.08'/%3E%3C/svg%3E"),
+    /* Grão orgânico tátil */
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='heroGrain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' seed='18' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23heroGrain)' opacity='0.045'/%3E%3C/svg%3E");
+  color: #FAF6F0;
+  border-bottom: none;
+  box-shadow:
+    inset 0 0 100px rgba(0, 0, 0, 0.7),
+    inset 0 -40px 60px rgba(0, 0, 0, 0.5),
+    0 10px 30px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.section-hero-cinematic h1 {
+  color: #FAF6F0;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.6), 0 0 30px rgba(232, 186, 104, 0.2);
+}
+
+.section-hero-cinematic p {
+  color: #E8DCD0;
+}
+
+.section-hero-cinematic p strong {
+  color: #FAF6F0;
+}
+
+/* 1. Fundo Linho Acolhedor — Papel Vergê com Fibras Visíveis */
+.section-linen {
+  background-color: var(--color-bg-linen);
+  background-image:
+    /* Luz de vela suave no topo central */
+    radial-gradient(ellipse 75% 45% at 50% 0%, rgba(232, 186, 104, 0.18) 0%, transparent 100%),
+    /* Luz quente lateral esquerda — janela da vó */
+    radial-gradient(circle at 8% 40%, rgba(232, 186, 104, 0.10) 0%, transparent 55%),
+    /* Toque terracota nos cantos */
+    radial-gradient(circle at 94% 88%, rgba(146, 54, 26, 0.06) 0%, transparent 45%),
+    /* Textura de papel vergê — fibras finas verticais */
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='verge'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.04 0.95' numOctaves='5' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23verge)' opacity='0.032'/%3E%3C/svg%3E"),
+    /* Grão orgânico fino */
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='3' seed='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23grain)' opacity='0.022'/%3E%3C/svg%3E");
+  color: var(--color-text-main);
+  box-shadow: var(--shadow-vignette-light);
+}
+
+/* 2. Fundo Marfim — Linho Natural com Luz de Vela Lateral */
+.section-warm {
+  background-color: var(--color-bg-linen-warm);
+  background-image:
+    /* Chama de vela no topo central */
+    radial-gradient(ellipse 60% 40% at 50% 8%, rgba(232, 186, 104, 0.22) 0%, transparent 100%),
+    /* Luz de janela lateral direita */
+    radial-gradient(circle at 92% 35%, rgba(245, 211, 142, 0.12) 0%, transparent 50%),
+    /* Toque de barro nos cantos inferiores */
+    radial-gradient(circle at 15% 90%, rgba(146, 54, 26, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 88% 85%, rgba(194, 144, 56, 0.07) 0%, transparent 45%),
+    /* Textura de linho — entrelaçamento fino de fibras */
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='linen'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.65 0.65' numOctaves='4' seed='12' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23linen)' opacity='0.025'/%3E%3C/svg%3E"),
+    /* Grão de papel artesanal */
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 150 150' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='grain2'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.78' numOctaves='3' seed='9' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23grain2)' opacity='0.02'/%3E%3C/svg%3E");
+  color: var(--color-text-main);
+  box-shadow: var(--shadow-vignette-warm);
+}
+
+/* 3. Seção Noturna — Madeira Escura de Casa de Vó à Luz de Velas */
+.section-dark {
+  background-color: var(--color-bg-dark-night);
+  background-image:
+    /* Halo dourado principal de vela — acima, centro */
+    radial-gradient(ellipse 65% 50% at 50% 12%, rgba(232, 186, 104, 0.28) 0%, transparent 100%),
+    /* Segundo foco de vela — lateral esquerda */
+    radial-gradient(circle at 18% 55%, rgba(194, 144, 56, 0.14) 0%, transparent 50%),
+    /* Terceiro foco de vela — lateral direita */
+    radial-gradient(circle at 84% 65%, rgba(146, 54, 26, 0.18) 0%, transparent 48%),
+    /* Luz quente profunda no centro-baixo */
+    radial-gradient(ellipse 50% 35% at 50% 88%, rgba(194, 144, 56, 0.12) 0%, transparent 100%),
+    /* Textura de madeira escura com veios */
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 600 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='wood'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.012 0.22' numOctaves='6' seed='5' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23wood)' opacity='0.055'/%3E%3C/svg%3E"),
+    /* Grão escuro adicional */
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='darkgrain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' seed='18' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23darkgrain)' opacity='0.04'/%3E%3C/svg%3E");
+  color: var(--color-text-on-dark);
+  border-top: none;
+  border-bottom: none;
+  box-shadow:
+    var(--shadow-vignette-dark),
+    inset 0 0 0 1px rgba(232, 186, 104, 0.05);
+}
+
+.section-dark h1,
+.section-dark h2,
+.section-dark h3 {
+  color: var(--color-text-on-dark);
+}
+
+.section-dark p {
+  color: var(--color-text-muted-on-dark);
+}
+
+.section-dark p strong {
+  color: var(--color-text-on-dark);
+}
+
+/* 4. Seção de Revelação do Produto — Mesa de Altar da Casa da Vovó */
+.section-revelation {
+  background-color: #F5ECD8;
+  background-image:
+    /* Foco de luz de vela central — como uma chama iluminando o livro */
+    radial-gradient(ellipse 70% 55% at 35% 40%, rgba(245, 211, 142, 0.30) 0%, transparent 80%),
+    /* Contra-luz dourada à direita */
+    radial-gradient(circle at 82% 55%, rgba(194, 144, 56, 0.15) 0%, transparent 50%),
+    /* Sombra terracota suave no canto inferior direito */
+    radial-gradient(circle at 90% 90%, rgba(146, 54, 26, 0.08) 0%, transparent 45%),
+    /* Textura de papel antigo envelhecido — pergaminho */
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='parchment'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.03 0.05' numOctaves='5' seed='22' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23parchment)' opacity='0.038'/%3E%3C/svg%3E"),
+    /* Grão de madeira de mesa rústica */
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 500 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='rustwood'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.018 0.28' numOctaves='5' seed='11' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23rustwood)' opacity='0.032'/%3E%3C/svg%3E");
+  border-top: none;
+  border-bottom: none;
+  box-shadow:
+    inset 0 0 60px rgba(194, 144, 56, 0.10),
+    var(--shadow-vignette-warm);
+}
+
+/* ==========================================================================
+   DIVISOR ORNAMENTAL BOTÂNICO — ETAPA 2 (LUZ DE VELA + OURO ENVELHECIDO)
+   ========================================================================== */
+.ornament-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  margin: var(--space-5) auto var(--space-7);
+  max-width: 440px;
+  position: relative;
+}
+
+.ornament-divider::before,
+.ornament-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--color-gold-leaf) 40%, var(--color-gold-bright) 60%, var(--color-gold-leaf) 80%, transparent 100%);
+  opacity: 0.65;
+}
+
+.section-dark .ornament-divider::before,
+.section-dark .ornament-divider::after {
+  background: linear-gradient(90deg, transparent 0%, var(--color-gold-leaf) 35%, var(--color-gold-bright) 55%, var(--color-gold-leaf) 80%, transparent 100%);
+  opacity: 0.75;
+}
+
+.ornament-symbol {
+  color: var(--color-gold-leaf);
+  font-size: 1.2rem;
+  line-height: 1;
+  text-shadow:
+    0 0 14px rgba(232, 186, 104, 0.70),
+    0 0 28px rgba(232, 186, 104, 0.35);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.18em;
+}
+
+.section-dark .ornament-symbol {
+  color: var(--color-gold-bright);
+  text-shadow:
+    0 0 18px rgba(232, 186, 104, 0.85),
+    0 0 36px rgba(232, 186, 104, 0.45);
+}
+
+/* Grids Responsivos */
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+}
+
+@media (min-width: 768px) {
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+  }
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  margin-top: var(--space-6);
+}
+
+@media (min-width: 768px) {
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-8);
+  }
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+}
+
+@media (min-width: 600px) {
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+  }
+}
+
+@media (min-width: 992px) {
+  .grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-6);
+  }
+}
+
+/* Cabeçalho de Seção */
+.section-header {
+  margin-bottom: var(--space-8);
+}
+
+.section-header.text-center {
+  max-width: var(--reading-max-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Scroll Reveal Suave e Acolhedor */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-scroll {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

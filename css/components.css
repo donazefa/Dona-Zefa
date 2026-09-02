@@ -1,0 +1,2008 @@
+/* ==========================================================================
+   1. HERO COMPONENT
+   ========================================================================== */
+.hero-wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: var(--space-8);
+  position: relative;
+  background: radial-gradient(ellipse 90% 70% at 70% 35%, rgba(36, 20, 10, 0.7) 0%, rgba(16, 8, 3, 0.88) 100%);
+  border: 1px solid rgba(194, 144, 56, 0.45);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6) var(--space-5);
+  box-shadow:
+    0 16px 45px rgba(0, 0, 0, 0.65),
+    inset 0 0 45px rgba(194, 144, 56, 0.09);
+}
+
+@media (min-width: 900px) {
+  .hero-wrapper {
+    display: grid;
+    grid-template-columns: 1.08fr 0.92fr;
+    align-items: center;
+    gap: var(--space-10);
+    padding: var(--space-10) var(--space-10);
+  }
+}
+
+/* Cantoneiras em filigrana dourada nos 4 cantos do bloco do Hero */
+.hero-wrapper::before,
+.hero-wrapper::after {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.hero-wrapper::before {
+  top: 10px;
+  left: 10px;
+  border-top: 2px solid rgba(232, 186, 104, 0.75);
+  border-left: 2px solid rgba(232, 186, 104, 0.75);
+}
+
+.hero-wrapper::after {
+  top: 10px;
+  right: 10px;
+  border-top: 2px solid rgba(232, 186, 104, 0.75);
+  border-right: 2px solid rgba(232, 186, 104, 0.75);
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-badge-container {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: rgba(26, 14, 7, 0.90);
+  color: var(--color-gold-bright);
+  padding: 6px 18px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border: 1px solid rgba(232, 186, 104, 0.65);
+  box-shadow: 0 0 16px rgba(232, 186, 104, 0.22), inset 0 0 8px rgba(232, 186, 104, 0.1);
+}
+
+.hero-subheadline-amber {
+  font-style: italic;
+  color: #E8BA68 !important;
+  font-size: 1.22rem !important;
+  line-height: 1.55 !important;
+  margin-bottom: var(--space-5) !important;
+  text-shadow: 0 0 14px rgba(232, 186, 104, 0.25);
+}
+
+.hero-cta-wrapper {
+  margin-top: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.btn-hero {
+  background: linear-gradient(135deg, #A43C1E 0%, #872E15 100%) !important;
+  color: #FFFFFF !important;
+  border: 1px solid rgba(245, 211, 142, 0.6) !important;
+  padding: 16px 36px !important;
+  font-family: var(--font-display) !important;
+  font-size: 1.15rem !important;
+  letter-spacing: 0.02em;
+  border-radius: var(--radius-pill) !important;
+  box-shadow: 0 8px 25px rgba(164, 60, 30, 0.45), 0 0 20px rgba(232, 186, 104, 0.28) !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-hero:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(164, 60, 30, 0.6), 0 0 30px rgba(232, 186, 104, 0.45) !important;
+  background: linear-gradient(135deg, #B54522 0%, #943217 100%) !important;
+}
+
+/* ==========================================================================
+   1.5. SEÇÃO QUEM É A VOVÓ ZEFA (APRESENTAÇÃO & RETRATO EDITORIAL)
+   ========================================================================== */
+.about-wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: var(--space-8);
+  position: relative;
+  background: radial-gradient(circle at 30% 30%, #FFFDF9 0%, #FAF4E8 100%);
+  border: 1.5px solid rgba(194, 144, 56, 0.45);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6) var(--space-5);
+  box-shadow:
+    inset 0 0 0 4px #FFFDF9,
+    inset 0 0 0 6px rgba(194, 144, 56, 0.22),
+    0 16px 45px rgba(36, 23, 14, 0.08);
+}
+
+@media (min-width: 900px) {
+  .about-wrapper {
+    display: grid;
+    grid-template-columns: 0.90fr 1.10fr;
+    align-items: center;
+    gap: var(--space-10);
+    padding: var(--space-10) var(--space-10);
+  }
+}
+
+.about-wrapper::before,
+.about-wrapper::after {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.about-wrapper::before {
+  top: 10px;
+  left: 10px;
+  border-top: 2px solid rgba(194, 144, 56, 0.7);
+  border-left: 2px solid rgba(194, 144, 56, 0.7);
+}
+
+.about-wrapper::after {
+  top: 10px;
+  right: 10px;
+  border-top: 2px solid rgba(194, 144, 56, 0.7);
+  border-right: 2px solid rgba(194, 144, 56, 0.7);
+}
+
+.about-quote-box {
+  background: rgba(158, 71, 42, 0.05);
+  border: 1px solid rgba(194, 144, 56, 0.35);
+  border-left: 3px solid var(--color-primary-terracotta);
+  border-radius: var(--radius-md);
+  padding: var(--space-5) var(--space-6);
+  margin-top: var(--space-5);
+}
+
+.about-quote-text {
+  font-family: var(--font-serif);
+  font-size: 1.12rem;
+  font-style: italic;
+  color: #24160E;
+  line-height: 1.6;
+  margin-bottom: var(--space-2) !important;
+}
+
+.about-quote-highlight {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-primary-terracotta);
+  margin: 0 !important;
+}
+
+/* ==========================================================================
+   2. MOLDURAS FOTOGRÁFICAS — ETAPA 2 (CANTONEIRAS + LUZ DE VELA VIVA)
+   ========================================================================== */
+@keyframes candleShimmer {
+  0%, 100% { box-shadow: var(--shadow-candle-intimate), var(--shadow-lg); }
+  33% { box-shadow: 0 0 70px rgba(232, 186, 104, 0.40), var(--shadow-lg); }
+  66% { box-shadow: 0 0 45px rgba(232, 186, 104, 0.30), var(--shadow-lg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portrait-gilded-frame {
+    animation: none !important;
+  }
+}
+
+.portrait-gilded-frame {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  border-radius: var(--radius-lg);
+  padding: 10px;
+  background: linear-gradient(145deg, #F5D38E 0%, #7D5116 25%, #C29038 55%, #9B7020 80%, #E8BA68 100%);
+  box-shadow: var(--shadow-candle-intimate), var(--shadow-lg);
+  animation: candleShimmer 8s ease-in-out infinite;
+  transition: transform var(--transition-normal);
+}
+
+/* Cantoneiras internas decorativas */
+.portrait-gilded-frame::before,
+.portrait-gilded-frame::after {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  z-index: 3;
+  pointer-events: none;
+}
+.portrait-gilded-frame::before {
+  top: 18px;
+  left: 18px;
+  border-top: 2px solid rgba(245, 211, 142, 0.7);
+  border-left: 2px solid rgba(245, 211, 142, 0.7);
+}
+.portrait-gilded-frame::after {
+  top: 18px;
+  right: 18px;
+  border-top: 2px solid rgba(245, 211, 142, 0.7);
+  border-right: 2px solid rgba(245, 211, 142, 0.7);
+}
+
+.portrait-gilded-frame:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 75px rgba(232, 186, 104, 0.50), var(--shadow-lg);
+}
+
+.portrait-gilded-inner {
+  position: relative;
+  border-radius: calc(var(--radius-lg) - 8px);
+  overflow: hidden;
+  background-color: var(--color-bg-dark-room);
+  border: 2px solid #1A0E06;
+}
+
+/* Cantoneiras inferiores via inner overlay */
+.portrait-gilded-inner::before,
+.portrait-gilded-inner::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  z-index: 3;
+  pointer-events: none;
+}
+.portrait-gilded-inner::before {
+  bottom: 52px;
+  left: 8px;
+  border-bottom: 2px solid rgba(245, 211, 142, 0.55);
+  border-left: 2px solid rgba(245, 211, 142, 0.55);
+}
+.portrait-gilded-inner::after {
+  bottom: 52px;
+  right: 8px;
+  border-bottom: 2px solid rgba(245, 211, 142, 0.55);
+  border-right: 2px solid rgba(245, 211, 142, 0.55);
+}
+
+.portrait-img-vertical {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 4.9;
+  max-height: 560px;
+  object-fit: cover;
+  object-position: center bottom;
+  display: block;
+  transition: transform 0.9s ease;
+  filter: brightness(0.98) contrast(1.04) saturate(0.96);
+}
+
+.portrait-gilded-frame:hover .portrait-img-vertical {
+  transform: scale(1.03);
+}
+
+.portrait-nameplate {
+  position: absolute;
+  bottom: var(--space-4);
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(15, 8, 3, 0.96);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: var(--color-gold-bright);
+  border: 1px solid rgba(194, 144, 56, 0.55);
+  padding: var(--space-2) var(--space-6);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-display);
+  font-size: var(--font-size-micro);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.65), 0 0 12px rgba(232, 186, 104, 0.25);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+/* ==========================================================================
+   3. BOTÕES E CTAS DE ALTA ACESSIBILIDADE & TOQUE ACOLHEDOR
+   ========================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: var(--space-3);
+  font-family: var(--font-sans);
+  font-size: 1.18rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: var(--radius-pill);
+  padding: var(--space-4) var(--space-8);
+  min-height: var(--min-touch-target);
+  cursor: pointer;
+  border: none;
+  transition: all var(--transition-normal);
+  width: 100%;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  user-select: none;
+}
+
+@media (min-width: 600px) {
+  .btn {
+    width: auto;
+    min-width: 340px;
+  }
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #92361A 0%, #752912 100%);
+  color: #FFFFFF !important;
+  border: 1px solid rgba(232, 186, 104, 0.4);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(146, 54, 26, 0.38), 0 0 16px rgba(232, 186, 104, 0.2);
+}
+
+.btn-primary::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.14) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #A43C1E 0%, #872E15 100%);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg), 0 0 32px rgba(146, 54, 26, 0.5), 0 0 22px rgba(232, 186, 104, 0.35);
+  color: #FFFFFF;
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(146, 54, 26, 0.3);
+}
+
+.btn-secondary {
+  background-color: var(--color-bg-parchment);
+  color: var(--color-primary-terracotta) !important;
+  border: 2px solid var(--color-primary-terracotta);
+  box-shadow: var(--shadow-sm);
+  font-size: 1.08rem;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary-hover) !important;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-microcopy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-small);
+  color: var(--color-text-muted);
+  margin-top: var(--space-3);
+  text-align: center;
+}
+
+.section-dark .btn-microcopy {
+  color: var(--color-text-muted-on-dark);
+}
+
+.btn-microcopy svg {
+  width: 16px;
+  height: 16px;
+  color: var(--color-gold-leaf);
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   4. CARDS DOS 3 EIXOS (DINHEIRO, AMOR, PROTEÇÃO) — MANUSCRITO EDITORIAL
+   ========================================================================== */
+.pillar-card {
+  background-color: #FAF5EA;
+  border: 1.5px solid rgba(194, 144, 56, 0.55);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8) var(--space-6) var(--space-6);
+  box-shadow: 
+    inset 0 0 0 4px #FFFDF9,
+    inset 0 0 0 6px rgba(194, 144, 56, 0.28),
+    inset 0 20px 30px -15px rgba(194, 144, 56, 0.12),
+    0 12px 35px rgba(36, 23, 14, 0.09);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(232, 186, 104, 0.22) 0%, transparent 65%),
+    radial-gradient(circle at 50% 100%, rgba(158, 71, 42, 0.05) 0%, transparent 60%),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noisePillar'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noisePillar)' opacity='0.035'/%3E%3C/svg%3E");
+}
+
+/* Cantoneiras douradas nos 4 cantos do card de manuscrito */
+.pillar-card::before,
+.pillar-card::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.pillar-card::before {
+  top: 8px;
+  left: 8px;
+  border-top: 1.5px solid rgba(194, 144, 56, 0.7);
+  border-left: 1.5px solid rgba(194, 144, 56, 0.7);
+}
+
+.pillar-card::after {
+  top: 8px;
+  right: 8px;
+  border-top: 1.5px solid rgba(194, 144, 56, 0.7);
+  border-right: 1.5px solid rgba(194, 144, 56, 0.7);
+}
+
+.pillar-card-bottom-corners {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.pillar-card-bottom-corners::before,
+.pillar-card-bottom-corners::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.pillar-card-bottom-corners::before {
+  bottom: 8px;
+  left: 8px;
+  border-bottom: 1.5px solid rgba(194, 144, 56, 0.7);
+  border-left: 1.5px solid rgba(194, 144, 56, 0.7);
+}
+
+.pillar-card-bottom-corners::after {
+  bottom: 8px;
+  right: 8px;
+  border-bottom: 1.5px solid rgba(194, 144, 56, 0.7);
+  border-right: 1.5px solid rgba(194, 144, 56, 0.7);
+}
+
+.pillar-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 
+    inset 0 0 0 4px #FFFDF9,
+    inset 0 0 0 6px rgba(194, 144, 56, 0.55),
+    0 22px 45px rgba(194, 144, 56, 0.25),
+    0 0 25px rgba(232, 186, 104, 0.30);
+  border-color: var(--color-border-gold-strong);
+}
+
+/* Medalhões em Xilogravura / Gravura Botânica — Etapa 2 */
+.pillar-icon-wrapper {
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 35% 30%, #FFFDF6 0%, #F6E7CE 50%, #E2C99B 100%);
+  color: var(--color-primary-terracotta);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-4);
+  border: 2.5px solid #C29038;
+  outline: 1.5px solid rgba(194, 144, 56, 0.45);
+  outline-offset: 5px;
+  box-shadow:
+    inset 0 0 22px rgba(194, 144, 56, 0.30),
+    inset 0 2px 5px rgba(255, 255, 255, 0.9),
+    0 8px 22px rgba(36, 23, 14, 0.14),
+    0 0 0 7px rgba(194, 144, 56, 0.08);
+  position: relative;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.pillar-card:hover .pillar-icon-wrapper {
+  transform: scale(1.06);
+  box-shadow:
+    inset 0 0 26px rgba(194, 144, 56, 0.42),
+    0 10px 28px rgba(158, 71, 42, 0.28),
+    0 0 0 8px rgba(194, 144, 56, 0.15);
+}
+
+.pillar-icon-wrapper svg {
+  width: 48px;
+  height: 48px;
+  filter: drop-shadow(0 2px 4px rgba(36, 23, 14, 0.20));
+}
+
+.pillar-subtitle-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-primary-terracotta);
+  background: rgba(158, 71, 42, 0.09);
+  border: 1px solid rgba(158, 71, 42, 0.22);
+  padding: 4px 14px;
+  border-radius: var(--radius-pill);
+  margin-bottom: var(--space-3);
+}
+
+.pillar-title {
+  font-family: var(--font-display);
+  font-size: 1.38rem;
+  color: #24160E;
+  margin-bottom: var(--space-3);
+  line-height: 1.3;
+}
+
+.pillar-card p {
+  color: #5C4B3E;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  margin: 0;
+  flex: 1;
+}
+
+/* Divisor botânico no rodapé de cada card */
+.pillar-botanical-footer {
+  margin-top: var(--space-5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #C29038;
+  opacity: 0.6;
+  width: 100%;
+}
+
+.pillar-botanical-footer svg {
+  width: 120px;
+  height: 16px;
+}
+
+/* Caixa de Fala Íntima da Vovó Zefa */
+.zefa-quote-scroll {
+  background-color: #FAF4E8;
+  border: 1.5px solid rgba(194, 144, 56, 0.55);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8) var(--space-8);
+  margin-top: var(--space-10);
+  position: relative;
+  text-align: center;
+  box-shadow:
+    inset 0 0 0 4px #FFFDF9,
+    inset 0 0 0 6px rgba(194, 144, 56, 0.25),
+    0 10px 30px rgba(36, 23, 14, 0.08);
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% 0%, rgba(232, 186, 104, 0.20) 0%, transparent 80%),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='quoteGrain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23quoteGrain)' opacity='0.03'/%3E%3C/svg%3E");
+}
+
+.zefa-quote-scroll::before,
+.zefa-quote-scroll::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+}
+
+.zefa-quote-scroll::before {
+  top: 10px;
+  left: 10px;
+  border-top: 2px solid rgba(194, 144, 56, 0.7);
+  border-left: 2px solid rgba(194, 144, 56, 0.7);
+}
+
+.zefa-quote-scroll::after {
+  top: 10px;
+  right: 10px;
+  border-top: 2px solid rgba(194, 144, 56, 0.7);
+  border-right: 2px solid rgba(194, 144, 56, 0.7);
+}
+
+.zefa-quote-text {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-style: italic;
+  color: #24160E;
+  line-height: 1.65;
+  margin-bottom: var(--space-4);
+  position: relative;
+  z-index: 1;
+}
+
+.zefa-quote-signature {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-primary-terracotta);
+}
+
+/* ==========================================================================
+   5. COMPARATIVO VISUAL (DESEJO & PERMANÊNCIA DO LIVRO)
+   ========================================================================== */
+.comparison-container {
+  background-color: #FAF5EB;
+  border: 1.5px solid rgba(194, 144, 56, 0.45);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  box-shadow: 
+    inset 0 0 0 4px #FFFDF9,
+    inset 0 0 0 6px rgba(194, 144, 56, 0.22),
+    0 12px 35px rgba(36, 23, 14, 0.08);
+  background-image:
+    radial-gradient(circle at 50% 0%, rgba(232, 186, 104, 0.16) 0%, transparent 70%),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='compGrain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23compGrain)' opacity='0.025'/%3E%3C/svg%3E");
+  margin: var(--space-8) 0;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .comparison-container {
+    padding: var(--space-8);
+  }
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+@media (min-width: 768px) {
+  .comparison-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-6);
+  }
+}
+
+/* Card 1: O Feed Efêmero (Desbotado / Passa Rápido) */
+.comparison-card-ephemeral {
+  background-color: #ECE4D8;
+  border: 1px solid rgba(120, 100, 85, 0.25);
+  border-radius: var(--radius-md);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.04);
+}
+
+.comparison-card-ephemeral .comparison-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #7A6555;
+  background: rgba(120, 100, 85, 0.12);
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  margin-bottom: var(--space-4);
+  width: fit-content;
+}
+
+.comparison-card-ephemeral h3 {
+  font-family: var(--font-display);
+  font-size: 1.28rem;
+  color: #4A3B30;
+  margin-bottom: var(--space-3);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.comparison-card-ephemeral p {
+  color: #6E5C4E;
+  font-size: 1.02rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Card 2: O Livro Guardado (Pergaminho Nobre / Luz de Vela) */
+.comparison-card-permanent {
+  background-color: #FFFDF9;
+  border: 1.5px solid rgba(194, 144, 56, 0.65);
+  border-radius: var(--radius-md);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow:
+    inset 0 0 0 3px #FFFDF9,
+    inset 0 0 0 5px rgba(194, 144, 56, 0.3),
+    0 8px 24px rgba(158, 71, 42, 0.12),
+    0 0 20px rgba(232, 186, 104, 0.20);
+  background-image:
+    radial-gradient(circle at 50% 0%, rgba(232, 186, 104, 0.20) 0%, transparent 70%);
+}
+
+.comparison-card-permanent::before,
+.comparison-card-permanent::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  pointer-events: none;
+}
+
+.comparison-card-permanent::before {
+  top: 6px;
+  left: 6px;
+  border-top: 1.5px solid rgba(194, 144, 56, 0.7);
+  border-left: 1.5px solid rgba(194, 144, 56, 0.7);
+}
+
+.comparison-card-permanent::after {
+  top: 6px;
+  right: 6px;
+  border-top: 1.5px solid rgba(194, 144, 56, 0.7);
+  border-right: 1.5px solid rgba(194, 144, 56, 0.7);
+}
+
+.comparison-card-permanent .comparison-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-primary-terracotta);
+  background: rgba(158, 71, 42, 0.10);
+  border: 1px solid rgba(158, 71, 42, 0.25);
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  margin-bottom: var(--space-4);
+  width: fit-content;
+}
+
+.comparison-card-permanent h3 {
+  font-family: var(--font-display);
+  font-size: 1.28rem;
+  color: #24160E;
+  margin-bottom: var(--space-3);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.comparison-card-permanent p {
+  color: #4A382A;
+  font-size: 1.02rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Manifesto de Honestidade */
+.honesty-manifesto-box {
+  background: #FAF3E6;
+  border: 1.5px solid rgba(194, 144, 56, 0.45);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8) var(--space-6);
+  margin-top: var(--space-8);
+  text-align: center;
+  position: relative;
+  box-shadow:
+    inset 0 0 0 4px #FFFDF9,
+    inset 0 0 0 5px rgba(194, 144, 56, 0.2),
+    0 8px 25px rgba(36, 23, 14, 0.06);
+}
+
+.honesty-manifesto-title {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--color-primary-terracotta);
+  margin-bottom: var(--space-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+.honesty-manifesto-text {
+  font-family: var(--font-serif);
+  font-size: 1.18rem;
+  font-style: italic;
+  color: #2B2118;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ==========================================================================
+   6. AUTORIDADE & PROVA DE AUDIÊNCIA (PLACA NOBRE À LUZ DE VELA)
+   ========================================================================== */
+.authority-card {
+  background:
+    /* Halo de vela central brilhante */
+    radial-gradient(ellipse 70% 55% at 50% 25%, rgba(232, 186, 104, 0.26) 0%, transparent 100%),
+    /* Luz lateral terracota */
+    radial-gradient(circle at 12% 70%, rgba(146, 54, 26, 0.18) 0%, transparent 50%),
+    radial-gradient(circle at 90% 60%, rgba(194, 144, 56, 0.14) 0%, transparent 48%),
+    /* Madeira escura de base */
+    linear-gradient(160deg, #24140A 0%, #100602 50%, #1A0C06 100%);
+  border: 1.5px solid rgba(232, 186, 104, 0.55);
+  border-radius: var(--radius-lg);
+  padding: var(--space-10) var(--space-8);
+  text-align: center;
+  box-shadow:
+    inset 0 0 0 4px rgba(10, 4, 1, 0.95),
+    inset 0 0 0 6px rgba(194, 144, 56, 0.35),
+    0 20px 60px rgba(0, 0, 0, 0.75),
+    var(--shadow-candle-intimate);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Cantoneiras douradas nos 4 cantos da placa de autoridade */
+.authority-card::before,
+.authority-card::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.authority-card::before {
+  top: 10px;
+  left: 10px;
+  border-top: 2px solid rgba(232, 186, 104, 0.8);
+  border-left: 2px solid rgba(232, 186, 104, 0.8);
+}
+
+.authority-card::after {
+  top: 10px;
+  right: 10px;
+  border-top: 2px solid rgba(232, 186, 104, 0.8);
+  border-right: 2px solid rgba(232, 186, 104, 0.8);
+}
+
+.authority-card-corners {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.authority-card-corners::before,
+.authority-card-corners::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.authority-card-corners::before {
+  bottom: 10px;
+  left: 10px;
+  border-bottom: 2px solid rgba(232, 186, 104, 0.8);
+  border-left: 2px solid rgba(232, 186, 104, 0.8);
+}
+
+.authority-card-corners::after {
+  bottom: 10px;
+  right: 10px;
+  border-bottom: 2px solid rgba(232, 186, 104, 0.8);
+  border-right: 2px solid rgba(232, 186, 104, 0.8);
+}
+
+.authority-watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(280px, 45vw, 420px);
+  height: clamp(280px, 45vw, 420px);
+  background-image: url('../assets/images/marca_dagua_dona_zefa.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.085;
+  pointer-events: none;
+  z-index: 0;
+  filter: drop-shadow(0 0 20px rgba(212, 163, 89, 0.3));
+}
+
+.authority-card > *:not(.authority-card-corners):not(.authority-watermark) {
+  position: relative;
+  z-index: 1;
+}
+
+.authority-number {
+  font-family: var(--font-display);
+  font-size: clamp(3.6rem, 10.5vw, 5.2rem);
+  font-weight: 700;
+  background: linear-gradient(135deg, #FFF5DF 0%, #F5D38E 35%, #C29038 70%, #E8BA68 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.05;
+  margin-bottom: var(--space-2);
+  filter: drop-shadow(0 0 30px rgba(232, 186, 104, 0.55));
+  letter-spacing: -0.02em;
+}
+
+.authority-subtitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 3.5vw, 1.7rem);
+  font-weight: 600;
+  color: #FAF6F0;
+  margin-bottom: var(--space-5);
+  letter-spacing: -0.01em;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.authority-card p {
+  color: #E6D8CA !important;
+  font-size: 1.08rem;
+  line-height: 1.7;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.authority-card p strong {
+  color: #FAF6F0 !important;
+}
+
+/* Badge Social / Perfil Oficial do Facebook */
+.authority-social-proof {
+  margin-top: var(--space-6);
+  display: flex;
+  justify-content: center;
+}
+
+.authority-fb-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  background: rgba(36, 22, 14, 0.88);
+  border: 1px solid var(--color-border-gold);
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-pill);
+  color: var(--color-text-on-dark);
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), inset 0 0 12px rgba(232, 186, 104, 0.1);
+  transition: all var(--transition-normal);
+}
+
+.authority-fb-badge:hover {
+  background: rgba(44, 28, 18, 0.96);
+  border-color: var(--color-gold-bright);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 20px rgba(232, 186, 104, 0.3);
+  color: #FFFFFF;
+}
+
+.authority-fb-icon {
+  width: 26px;
+  height: 26px;
+  color: var(--color-gold-bright);
+  flex-shrink: 0;
+}
+
+.authority-fb-text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.authority-fb-handle {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--color-gold-bright);
+}
+
+.authority-fb-label {
+  font-size: var(--font-size-micro);
+  color: var(--color-text-muted-on-dark);
+}
+
+/* ==========================================================================
+   7. MOCKUP REALISTA DO PRODUTO (REVELAÇÃO DO LIVRO)
+   ========================================================================== */
+.product-showcase {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-8);
+  position: relative;
+  background: radial-gradient(circle at 70% 30%, #FFFDF9 0%, #FAF4E8 100%);
+  border: 1.5px solid rgba(194, 144, 56, 0.45);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6) var(--space-5);
+  box-shadow:
+    inset 0 0 0 4px #FFFDF9,
+    inset 0 0 0 6px rgba(194, 144, 56, 0.22),
+    0 16px 45px rgba(36, 23, 14, 0.08);
+}
+
+@media (min-width: 900px) {
+  .product-showcase {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+    gap: var(--space-10);
+    padding: var(--space-10) var(--space-10);
+  }
+}
+
+.product-showcase::before,
+.product-showcase::after {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.product-showcase::before {
+  top: 10px;
+  left: 10px;
+  border-top: 2px solid rgba(194, 144, 56, 0.7);
+  border-left: 2px solid rgba(194, 144, 56, 0.7);
+}
+
+.product-showcase::after {
+  top: 10px;
+  right: 10px;
+  border-top: 2px solid rgba(194, 144, 56, 0.7);
+  border-right: 2px solid rgba(194, 144, 56, 0.7);
+}
+
+.product-mockup-container {
+  position: relative;
+  width: 100%;
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+.product-mockup-frame {
+  position: relative;
+  border-radius: var(--radius-lg);
+  padding: 10px;
+  background: linear-gradient(135deg, #F5D38E 0%, #7D5116 35%, #C29038 70%, #E8BA68 100%);
+  box-shadow: var(--shadow-revelation), 0 0 35px rgba(232, 186, 104, 0.3);
+  overflow: hidden;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.product-mockup-frame:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 28px 70px rgba(146, 54, 26, 0.22), 0 0 65px rgba(232, 186, 104, 0.45);
+}
+
+.product-mockup-inner {
+  border-radius: calc(var(--radius-lg) - 7px);
+  overflow: hidden;
+  background-color: #1A1009;
+}
+
+.product-mockup-img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.mockup-badge-large-print {
+  position: absolute;
+  top: -12px;
+  right: var(--space-4);
+  background: linear-gradient(135deg, #A43C1E 0%, #872E15 100%);
+  color: #FFFFFF;
+  font-family: var(--font-display);
+  font-size: var(--font-size-micro);
+  font-weight: 700;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-md), 0 0 20px rgba(146, 54, 26, 0.45);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border: 1px solid rgba(245, 211, 142, 0.5);
+  z-index: 2;
+}
+
+.product-feature-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: var(--space-5) 0 var(--space-4);
+}
+
+.product-feature-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #24160E;
+  background: rgba(194, 144, 56, 0.12);
+  border: 1px solid rgba(194, 144, 56, 0.35);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+}
+
+/* ==========================================================================
+   8. PILARES DO CONTEÚDO (O QUE VOCÊ RECEBE - FICHAS CAPITULARES)
+   ========================================================================== */
+.feature-card {
+  background-color: #FAF5EA;
+  border: 1.5px solid rgba(194, 144, 56, 0.50);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6) var(--space-5);
+  box-shadow: 
+    inset 0 0 0 4px #FFFDF9,
+    inset 0 0 0 6px rgba(194, 144, 56, 0.25),
+    0 10px 30px rgba(36, 23, 14, 0.08);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+  background-image:
+    radial-gradient(circle at 50% 0%, rgba(232, 186, 104, 0.18) 0%, transparent 65%),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='featNoise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23featNoise)' opacity='0.025'/%3E%3C/svg%3E");
+}
+
+.feature-card::before,
+.feature-card::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.feature-card::before {
+  top: 6px;
+  left: 6px;
+  border-top: 1.5px solid rgba(194, 144, 56, 0.7);
+  border-left: 1.5px solid rgba(194, 144, 56, 0.7);
+}
+
+.feature-card::after {
+  top: 6px;
+  right: 6px;
+  border-top: 1.5px solid rgba(194, 144, 56, 0.7);
+  border-right: 1.5px solid rgba(194, 144, 56, 0.7);
+}
+
+.feature-card-bottom-corners {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.feature-card-bottom-corners::before,
+.feature-card-bottom-corners::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.feature-card-bottom-corners::before {
+  bottom: 6px;
+  left: 6px;
+  border-bottom: 1.5px solid rgba(194, 144, 56, 0.7);
+  border-left: 1.5px solid rgba(194, 144, 56, 0.7);
+}
+
+.feature-card-bottom-corners::after {
+  bottom: 6px;
+  right: 6px;
+  border-bottom: 1.5px solid rgba(194, 144, 56, 0.7);
+  border-right: 1.5px solid rgba(194, 144, 56, 0.7);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    inset 0 0 0 4px #FFFDF9,
+    inset 0 0 0 6px rgba(194, 144, 56, 0.50),
+    0 18px 40px rgba(194, 144, 56, 0.22),
+    0 0 20px rgba(232, 186, 104, 0.25);
+  border-color: var(--color-border-gold-strong);
+}
+
+.feature-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-4);
+}
+
+.feature-number-roman {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--color-primary-terracotta);
+  letter-spacing: 0.08em;
+  text-shadow: 0 0 10px rgba(232, 186, 104, 0.4);
+}
+
+.feature-icon-badge {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #FFFDF6 0%, #F6E7CE 50%, #E2C99B 100%);
+  color: var(--color-primary-terracotta);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #C29038;
+  outline: 1px solid rgba(194, 144, 56, 0.4);
+  outline-offset: 4px;
+  box-shadow:
+    inset 0 0 14px rgba(194, 144, 56, 0.25),
+    0 6px 16px rgba(36, 23, 14, 0.1);
+  transition: transform 0.35s ease;
+}
+
+.feature-card:hover .feature-icon-badge {
+  transform: scale(1.08);
+}
+
+.feature-icon-badge svg {
+  width: 32px;
+  height: 32px;
+  filter: drop-shadow(0 1px 3px rgba(36, 23, 14, 0.15));
+}
+
+.feature-subtitle-tag {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-primary-terracotta);
+  background: rgba(158, 71, 42, 0.08);
+  border: 1px solid rgba(158, 71, 42, 0.2);
+  padding: 2px 10px;
+  border-radius: var(--radius-pill);
+  margin-bottom: var(--space-2);
+  width: fit-content;
+}
+
+.feature-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: #24160E;
+  margin-bottom: var(--space-2);
+  line-height: 1.3;
+}
+
+.feature-card p {
+  color: #5C4B3E;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  margin: 0;
+  flex: 1;
+}
+
+/* ==========================================================================
+   9. CARD NOBRE DE OFERTA E PREÇO (R$ 39,90) - MANUSCRITO ILUMINADO
+   ========================================================================== */
+.offer-card {
+  background: #FFFDF8;
+  border: 2px solid #C29038;
+  border-radius: var(--radius-lg);
+  padding: var(--space-8) var(--space-6);
+  box-shadow:
+    inset 0 0 0 5px #FFFDF9,
+    inset 0 0 0 7px rgba(194, 144, 56, 0.35),
+    0 20px 50px rgba(36, 23, 14, 0.12),
+    0 0 35px rgba(232, 186, 104, 0.25);
+  position: relative;
+  text-align: center;
+  max-width: 660px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image:
+    /* Halo de vela dourada no topo */
+    radial-gradient(ellipse 80% 40% at 50% 0%, rgba(232, 186, 104, 0.22) 0%, transparent 100%),
+    /* Toque suave de terracota na base */
+    radial-gradient(circle at 50% 100%, rgba(146, 54, 26, 0.05) 0%, transparent 70%),
+    /* Textura de papel pergaminho */
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='parch'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.04 0.06' numOctaves='4' seed='20' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23parch)' opacity='0.03'/%3E%3C/svg%3E");
+}
+
+@media (min-width: 768px) {
+  .offer-card {
+    padding: var(--space-10) var(--space-10);
+  }
+}
+
+/* Cantoneiras douradas nos 4 cantos do card de oferta */
+.offer-card::before,
+.offer-card::after {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.offer-card::before {
+  top: 10px;
+  left: 10px;
+  border-top: 2px solid rgba(194, 144, 56, 0.75);
+  border-left: 2px solid rgba(194, 144, 56, 0.75);
+}
+
+.offer-card::after {
+  top: 10px;
+  right: 10px;
+  border-top: 2px solid rgba(194, 144, 56, 0.75);
+  border-right: 2px solid rgba(194, 144, 56, 0.75);
+}
+
+.offer-card-corners {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.offer-card-corners::before,
+.offer-card-corners::after {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.offer-card-corners::before {
+  bottom: 10px;
+  left: 10px;
+  border-bottom: 2px solid rgba(194, 144, 56, 0.75);
+  border-left: 2px solid rgba(194, 144, 56, 0.75);
+}
+
+.offer-card-corners::after {
+  bottom: 10px;
+  right: 10px;
+  border-bottom: 2px solid rgba(194, 144, 56, 0.75);
+  border-right: 2px solid rgba(194, 144, 56, 0.75);
+}
+
+/* Marca d'água de fundo do card de oferta */
+.offer-watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(260px, 42vw, 360px);
+  height: clamp(260px, 42vw, 360px);
+  background-image: url('../assets/images/marca_dagua_dona_zefa.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.055;
+  pointer-events: none;
+  z-index: 0;
+  filter: drop-shadow(0 0 16px rgba(212, 163, 89, 0.2));
+}
+
+.offer-card > *:not(.offer-card-corners):not(.offer-watermark) {
+  position: relative;
+  z-index: 1;
+}
+
+/* Selo Oficial de Autenticidade no topo do card */
+.offer-seal-badge {
+  margin: 0 auto var(--space-4);
+  display: flex;
+  justify-content: center;
+}
+
+.offer-seal-img {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  filter: drop-shadow(0 4px 14px rgba(36, 23, 14, 0.25)) drop-shadow(0 0 20px rgba(212, 163, 89, 0.45));
+  transition: transform 0.4s ease;
+}
+
+.offer-card:hover .offer-seal-img {
+  transform: scale(1.06) rotate(3deg);
+}
+
+.offer-product-name {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5.5vw, 2.7rem);
+  color: #24160E;
+  margin-bottom: var(--space-2);
+  font-weight: 700;
+}
+
+.offer-product-badge {
+  display: inline-block;
+  background-color: rgba(158, 71, 42, 0.08);
+  color: var(--color-primary-terracotta);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 4px 16px;
+  border-radius: var(--radius-pill);
+  margin-bottom: var(--space-5);
+  border: 1px solid rgba(158, 71, 42, 0.25);
+}
+
+.offer-price-box {
+  margin: var(--space-5) 0 var(--space-6);
+  padding: var(--space-5) 0;
+  border-top: 1px dashed rgba(194, 144, 56, 0.45);
+  border-bottom: 1px dashed rgba(194, 144, 56, 0.45);
+  background: radial-gradient(circle, rgba(232, 186, 104, 0.15) 0%, transparent 75%);
+}
+
+.offer-price-currency {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #7A6555;
+  vertical-align: top;
+  margin-top: 8px;
+  display: inline-block;
+  margin-right: 4px;
+}
+
+.offer-price-val {
+  font-family: var(--font-display);
+  font-size: clamp(3.8rem, 10.5vw, 5.2rem);
+  font-weight: 700;
+  color: var(--color-primary-terracotta);
+  line-height: 1;
+  text-shadow: 0 2px 20px rgba(158, 71, 42, 0.15);
+}
+
+.offer-price-type {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #5C4B3E;
+  margin-top: var(--space-2);
+}
+
+.offer-checklist {
+  list-style: none;
+  text-align: left;
+  margin: var(--space-6) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: 0;
+}
+
+.offer-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  font-size: 1.05rem;
+  color: #3D2D20;
+}
+
+.offer-checklist svg {
+  width: 22px;
+  height: 22px;
+  color: var(--color-gold-leaf);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.offer-guarantee-box {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  background: rgba(194, 144, 56, 0.08);
+  border: 1px solid rgba(194, 144, 56, 0.35);
+  border-radius: var(--radius-md);
+  padding: var(--space-4) var(--space-5);
+  margin-top: var(--space-6);
+  text-align: left;
+}
+
+.offer-guarantee-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #FFFDF8;
+  border: 1.5px solid #C29038;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9E472A;
+  flex-shrink: 0;
+  box-shadow: 0 3px 10px rgba(194, 144, 56, 0.2);
+}
+
+.offer-guarantee-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.offer-guarantee-box strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: #24160E;
+  margin-bottom: 2px;
+}
+
+.offer-guarantee-box p {
+  font-size: 0.92rem;
+  color: #5C4B3E;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ==========================================================================
+   10. FAQ ACCORDION EM PERGAMINHO
+   ========================================================================== */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: var(--reading-max-width);
+  margin: var(--space-8) auto 0;
+}
+
+.faq-item {
+  background-color: #FFFDF9;
+  background-image:
+    radial-gradient(circle at 10% 20%, rgba(232, 186, 104, 0.08) 0%, transparent 60%),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='faqGrain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.88' numOctaves='2' seed='13' stitchTiles='stitch'/%3E%3Cfilter%3E%3Crect width='100%25' height='100%25' filter='url(%23faqGrain)' opacity='0.018'/%3E%3C/svg%3E");
+  border: 1.5px solid rgba(194, 144, 56, 0.40);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow:
+    inset 0 0 0 3px #FFFDF9,
+    inset 0 0 0 4px rgba(194, 144, 56, 0.16),
+    0 4px 15px rgba(36, 23, 14, 0.04);
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  border-color: rgba(194, 144, 56, 0.75);
+  box-shadow:
+    inset 0 0 0 3px #FFFDF9,
+    inset 0 0 0 4px rgba(194, 144, 56, 0.30),
+    0 8px 24px rgba(194, 144, 56, 0.12);
+}
+
+.faq-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  padding: var(--space-5) var(--space-6);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-size: 1.22rem;
+  font-weight: 700;
+  color: #24160E;
+  min-height: var(--min-touch-target);
+  gap: var(--space-4);
+  transition: color var(--transition-fast);
+}
+
+.faq-button:hover {
+  color: var(--color-primary-terracotta);
+}
+
+.faq-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #FFFDF6 0%, #F5E8D4 100%);
+  color: var(--color-primary-terracotta);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform var(--transition-normal), background-color var(--transition-fast), color var(--transition-fast);
+  font-size: 1.4rem;
+  font-family: var(--font-sans);
+  font-weight: 400;
+  line-height: 1;
+  border: 1.5px solid #C29038;
+  box-shadow: 0 2px 6px rgba(194, 144, 56, 0.15);
+}
+
+.faq-button[aria-expanded="true"] .faq-icon {
+  transform: rotate(45deg);
+  background: var(--color-primary-terracotta);
+  color: #FFFFFF;
+  border-color: var(--color-primary-terracotta);
+}
+
+.faq-answer {
+  padding: 0 var(--space-6) var(--space-6);
+  display: none;
+  font-size: 1.04rem;
+  line-height: 1.7;
+  color: #4A382A;
+  border-top: 1px dashed rgba(194, 144, 56, 0.35);
+  padding-top: var(--space-4);
+}
+
+.faq-answer[data-open="true"] {
+  display: block;
+}
+
+/* ==========================================================================
+   11. FECHAMENTO EMOCIONAL & RODAPÉ
+   ========================================================================== */
+/* ==========================================================================
+   11. FECHAMENTO EMOCIONAL & RODAPÉ
+   ========================================================================== */
+.closing-box {
+  text-align: center;
+  max-width: var(--reading-max-width);
+  margin: 0 auto;
+  position: relative;
+}
+
+.closing-signature-card {
+  margin: var(--space-6) auto;
+  padding: var(--space-4) var(--space-6);
+  background: rgba(232, 186, 104, 0.07);
+  border: 1px solid rgba(232, 186, 104, 0.3);
+  border-radius: var(--radius-md);
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  text-align: left;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+.closing-seal-img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 14px rgba(232, 186, 104, 0.45));
+  flex-shrink: 0;
+}
+
+.closing-signature-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.closing-signature-intro {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-style: italic;
+  color: #E8DCD0;
+  margin-bottom: var(--space-1) !important;
+}
+
+.closing-signature-name {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--color-gold-bright);
+  letter-spacing: 0.05em;
+  margin: 0 !important;
+  text-shadow: 0 0 15px rgba(232, 186, 104, 0.4);
+}
+
+/* Halo de vela dourada sob o CTA final */
+.closing-box::before {
+  content: "";
+  position: absolute;
+  bottom: -var(--space-4);
+  left: 10%;
+  right: 10%;
+  height: 120px;
+  background: radial-gradient(ellipse at 50% 100%, rgba(232, 186, 104, 0.18) 0%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.closing-box > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Ornamento de encerramento após o CTA */
+.closing-ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-top: var(--space-8);
+  opacity: 0.55;
+}
+
+.closing-ornament::before,
+.closing-ornament::after {
+  content: "";
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-gold-bright), transparent);
+}
+
+.closing-ornament-symbol {
+  color: var(--color-gold-bright);
+  font-size: 1rem;
+  letter-spacing: 0.2em;
+  text-shadow: 0 0 12px rgba(232, 186, 104, 0.6);
+}
+
+.footer-bar {
+  background-color: #0D0602;
+  border-top: 1px solid rgba(194, 144, 56, 0.28);
+  padding: var(--space-8) 0;
+  color: var(--color-text-muted-on-dark);
+  font-size: var(--font-size-small);
+  text-align: center;
+  background-image:
+    radial-gradient(circle at 50% 0%, rgba(194, 144, 56, 0.08) 0%, transparent 60%);
+}
+
+.footer-brand-seal {
+  margin-bottom: var(--space-3);
+  display: flex;
+  justify-content: center;
+}
+
+.footer-seal-img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  opacity: 0.88;
+  filter: drop-shadow(0 0 14px rgba(232, 186, 104, 0.35));
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.footer-seal-img:hover {
+  opacity: 1;
+  transform: scale(1.08) rotate(3deg);
+}
+
+/* ==========================================================================
+   ESCLARECIMENTO DE FORMATO DIGITAL (PÚBLICO 50+)
+   ========================================================================== */
+.digital-clarity-box {
+  background: #FFFDF9;
+  border: 1.5px solid #C29038;
+  border-radius: var(--radius-md);
+  padding: var(--space-5) var(--space-6);
+  margin-top: var(--space-5);
+  margin-bottom: var(--space-4);
+  box-shadow:
+    inset 0 0 0 3px #FFFDF9,
+    inset 0 0 0 5px rgba(194, 144, 56, 0.25),
+    0 10px 25px rgba(36, 23, 14, 0.08);
+  position: relative;
+  text-align: left;
+}
+
+.digital-clarity-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-2);
+}
+
+.digital-clarity-icon-wrapper {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(194, 144, 56, 0.15);
+  border: 1px solid rgba(194, 144, 56, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9E472A;
+  flex-shrink: 0;
+}
+
+.digital-clarity-icon-wrapper svg {
+  width: 22px;
+  height: 22px;
+}
+
+.digital-clarity-badge {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #9E472A;
+  margin-bottom: 2px;
+}
+
+.digital-clarity-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: #24160E;
+  margin: 0;
+  font-weight: 700;
+}
+
+.digital-clarity-text {
+  font-size: 0.96rem;
+  line-height: 1.65;
+  color: #4A382A;
+  margin: 0;
+}
+
+.digital-clarity-text strong {
+  color: #9E472A;
+}
+
+/* Selo de livro digital na Seção de Oferta */
+.offer-digital-strip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  background: rgba(194, 144, 56, 0.14);
+  border: 1px dashed rgba(194, 144, 56, 0.6);
+  border-radius: var(--radius-pill);
+  padding: 6px 18px;
+  margin-bottom: var(--space-4);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #6E3B1B;
+}
+
+/* Botão secundário do Hero */
+.btn-hero-secondary {
+  background: rgba(26, 14, 7, 0.75) !important;
+  color: var(--color-gold-bright) !important;
+  border: 1.5px solid rgba(232, 186, 104, 0.55) !important;
+  padding: 14px 26px !important;
+  font-family: var(--font-display) !important;
+  font-size: 1.05rem !important;
+  border-radius: var(--radius-pill) !important;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-hero-secondary:hover {
+  background: rgba(232, 186, 104, 0.18) !important;
+  border-color: var(--color-gold-bright) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 0 22px rgba(232, 186, 104, 0.35);
+  color: #FFFDF9 !important;
+}
+
+/* Grupo de CTAs do Hero */
+.hero-cta-group {
+  margin-top: var(--space-6);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+/* Destaque animado no card de oferta ao clicar em CTA de checkout */
+@keyframes offerHighlightPulse {
+  0% {
+    box-shadow: inset 0 0 0 5px #FFFDF9, inset 0 0 0 7px rgba(194, 144, 56, 0.35), 0 20px 50px rgba(36, 23, 14, 0.12), 0 0 35px rgba(232, 186, 104, 0.25);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: inset 0 0 0 5px #FFFDF9, inset 0 0 0 7px rgba(232, 186, 104, 0.9), 0 20px 50px rgba(164, 60, 30, 0.3), 0 0 60px rgba(232, 186, 104, 0.7);
+    transform: scale(1.015);
+  }
+  100% {
+    box-shadow: inset 0 0 0 5px #FFFDF9, inset 0 0 0 7px rgba(194, 144, 56, 0.35), 0 20px 50px rgba(36, 23, 14, 0.12), 0 0 35px rgba(232, 186, 104, 0.25);
+    transform: scale(1);
+  }
+}
+
+.offer-card.highlight-focus {
+  animation: offerHighlightPulse 1.2s ease-in-out 2;
+}
+
+/* Microcópia de segurança com ícones e clareza */
+.btn-microcopy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin-top: var(--space-3);
+  font-size: 0.85rem;
+  color: #6E5C4E;
+}
+
+.btn-microcopy-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  text-align: center;
+  line-height: 1.4;
+}
+
