@@ -6,10 +6,12 @@
  */
 
 /**
- * CONFIGURAÇÃO DO CHECKOUT DA HOTMART
+ * CONFIGURAÇÃO DO CHECKOUT DA KIRVANO
  * Link oficial de checkout para compra do Livro da Vovó Zefa
  */
-const HOTMART_CHECKOUT_URL = "https://pay.hotmart.com/Q106767117O?checkoutMode=10&bid=1788380022421";
+const KIRVANO_CHECKOUT_URL = "https://pay.kirvano.com/1bcdc3c6-d3d2-481b-96c5-5fd38f0437ee";
+const CHECKOUT_URL = KIRVANO_CHECKOUT_URL;
+const HOTMART_CHECKOUT_URL = KIRVANO_CHECKOUT_URL; // Compatibilidade retroativa
 
 document.addEventListener('DOMContentLoaded', () => {
   initFaqAccordion();
@@ -75,22 +77,22 @@ function initSmoothScroll() {
 }
 
 function getFinalCheckoutUrl() {
-  if (!HOTMART_CHECKOUT_URL || HOTMART_CHECKOUT_URL.trim() === '') return '';
+  if (!CHECKOUT_URL || CHECKOUT_URL.trim() === '') return '';
 
   try {
-    const hotmartUrl = new URL(HOTMART_CHECKOUT_URL);
+    const checkoutUrl = new URL(CHECKOUT_URL);
     const currentParams = new URLSearchParams(window.location.search);
 
-    // Repassa parâmetros da URL atual (UTMs, SRC, SCK) para a Hotmart
+    // Repassa parâmetros da URL atual (UTMs, SRC, SCK) para o checkout da Kirvano
     currentParams.forEach((value, key) => {
-      if (!hotmartUrl.searchParams.has(key)) {
-        hotmartUrl.searchParams.set(key, value);
+      if (!checkoutUrl.searchParams.has(key)) {
+        checkoutUrl.searchParams.set(key, value);
       }
     });
 
-    return hotmartUrl.toString();
+    return checkoutUrl.toString();
   } catch (err) {
-    return HOTMART_CHECKOUT_URL;
+    return CHECKOUT_URL;
   }
 }
 

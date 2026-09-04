@@ -7,7 +7,7 @@
 ## 1. Resumo do Projeto
 
 * **Produto:** *Livro da Vovó Zefa* — Livro digital (Ebook em PDF com letra grande, contendo 15 capítulos de simpatias, rezas e ensinamentos tradicionais).
-* **Preço:** R$ 39,90 (pagamento único via Hotmart).
+* **Preço:** R$ 39,90 (pagamento único via Kirvano).
 * **Público-Alvo:** Majoritariamente adulto e mais velho (público sênior/maduro), interessado em espiritualidade popular brasileira, tradições próximas à Umbanda, rezas, simpatias, proteção contra inveja/olho gordo, bênção financeira e harmonização no amor.
 * **Origem do Tráfego:** Principalmente Facebook (vídeos diários e conteúdos orgânicos/pagos) e tráfego frio.
 * **Objetivo:** Conduzir o visitante que assistiu aos vídeos da Vovó Zefa até a compra consciente do livro digital, posicionando o produto como um material organizado, prático e permanente para guardar no celular e consultar sempre que precisar, sem recorrer a promessas milagrosas ou gatilhos agressivos de marketing.
@@ -97,7 +97,7 @@ A página não pode parecer uma página de vendas tradicional de infoproduto. El
   * Texto: Branco Puro, Bold, `18px` a `20px`.
   * Altura mínima: `56px` a `60px` no mobile (garantindo área de toque ideal para dedos maiores e idosos).
   * Efeito Hover/Tap: Elevação sutil e brilho quente acolhedor, sem animações frenéticas.
-* **Microcopy de Apoio:** Sempre posicionado logo abaixo do botão (ex: *"Pagamento 100% seguro processado pela Hotmart"*), em tom neutro e reconfortante.
+* **Microcopy de Apoio:** Sempre posicionado logo abaixo do botão (ex: *"Pagamento 100% seguro processado pela Kirvano"*), em tom neutro e reconfortante.
 
 ### 4.6. Tratamento de Imagens e Mockups
 * Tons quentes, bordas arredondadas e iluminação aconchegante.
@@ -186,12 +186,12 @@ A estrutura visual segue rigorosamente a arquitetura aprovada (13 seções):
 │ • Resumo do Formato: 15 Capítulos • PDF • Letra Grande      │
 │ • Preço Claro e Sem Truques: R$ 39,90                       │
 │ • CTA Principal: "Quero o Livro da Vovó Zefa"               │
-│ • Selo de Confiança Hotmart                                 │
+│ • Selo de Confiança Kirvano                                 │
 └─────────────────────────────────────────────────────────────┘
                               │
 ┌─────────────────────────────────────────────────────────────┐
 │ [11. REDUÇÃO DE RISCO / SEGURANÇA & GARANTIA]              │
-│ • Box de Compra Segura Hotmart                              │
+│ • Box de Compra Segura Kirvano                              │
 │ • [PLACEHOLDER DE GARANTIA: PRAZO E POLÍTICA A CONFIRMAR]   │
 │ • CTA Secundário de Reforço                                 │
 └─────────────────────────────────────────────────────────────┘
@@ -212,7 +212,7 @@ A estrutura visual segue rigorosamente a arquitetura aprovada (13 seções):
 │ • Fundo Café Ancestral / Iluminação Quente de Velas        │
 │ • Mensagem Final de Bênção da Vovó Zefa                     │
 │ • CTA Final: "Quero o Livro da Vovó Zefa — R$ 39,90"        │
-│ • Microcopy de Segurança Hotmart                            │
+│ • Microcopy de Segurança Kirvano                            │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -233,7 +233,7 @@ Para garantir modularidade, manutenibilidade e altíssima performance, os seguin
 9. **`PriceCard`:** Card central de checkout com tipografia nobre de preço (R$ 39,90), lista de benefícios e microcopy de segurança.
 10. **`CTAButton`:** Botão de alta acessibilidade com estados de hover/tap tácteis e suporte a âncoras ou links diretos de checkout.
 11. **`FAQAccordion`:** Accordion expansível com botões grandes, ícones claros de abrir/fechar (+) e transição suave.
-12. **`TrustBadgeHotmart`:** Selo visual de ambiente seguro e pagamento processado pela Hotmart.
+12. **`TrustBadgeKirvano`:** Selo visual de ambiente seguro e pagamento processado pela Kirvano.
 13. **`PlaceholderNotice`:** Componente discreto para uso interno nos itens que aguardam confirmação do cliente.
 
 ---
@@ -263,7 +263,7 @@ O desenvolvimento técnico será executado rigorosamente nas seguintes etapas, a
 Em conformidade estrita com o Documento Mestre e o Briefing, as seguintes informações reais permanecem como pendências oficiais e serão integradas no momento exato de sua confirmação:
 
 1. **Sumário Real dos 15 Capítulos:** Títulos exatos e divisão de temas (aguardando envio/análise do arquivo PDF).
-2. **Método Exato de Entrega pela Hotmart:** Confirmação se a entrega ocorre por e-mail direto, download imediato ou área de membros.
+2. **Método Exato de Entrega pela Kirvano:** Confirmação se a entrega ocorre por e-mail direto, download imediato ou área de membros.
 3. **Política de Garantia:** Prazo legal/comercial exato (7, 15 ou 30 dias) e condições de suporte.
 4. **Bônus:** Confirmação se haverá algum material complementar incluso ou se a seção permanecerá suprimida.
 5. **Depoimentos Reais / Provas Sociais:** Coleta de depoimentos autênticos de leitores (caso venham a existir futuramente).

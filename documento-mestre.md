@@ -216,7 +216,7 @@ A principal justificativa para comprar em vez de apenas continuar acompanhando o
 - possibilidade de guardar no celular;
 - possibilidade de consultar quando necessário.
 
-A entrega exata pela Hotmart ainda precisa ser confirmada.
+A entrega exata pela Kirvano ainda precisa ser confirmada.
 
 ---
 
@@ -308,7 +308,7 @@ Ainda não confirmado:
 - entrega por e-mail;
 - download direto;
 - área de membros;
-- outro método dentro da Hotmart.
+- outro método dentro da Kirvano.
 
 Não inventar o método de entrega.
 
@@ -361,7 +361,7 @@ Trabalhar valor percebido por meio de:
 
 ### “É seguro comprar?”
 
-A compra é processada pela Hotmart, mas qualquer afirmação específica sobre segurança deve ser compatível com as informações oficiais da plataforma.
+A compra é processada pela Kirvano, mas qualquer afirmação específica sobre segurança deve ser compatível com as informações oficiais da plataforma.
 
 ### “E se eu não gostar?”
 

@@ -178,7 +178,7 @@ Você poderá guardar o material no seu celular e consultar quando precisar.
 
 ## Observação
 
-O método exato de entrega pela Hotmart ainda precisa ser confirmado. Não afirmar entrega por e-mail, área de membros ou download específico até confirmação.
+O método exato de entrega pela Kirvano ainda precisa ser confirmado. Não afirmar entrega por e-mail, área de membros ou download específico até confirmação.
 
 ---
 
@@ -241,7 +241,7 @@ Tudo organizado para você guardar e consultar quando quiser.
 
 ## Microcopy
 
-**Pagamento processado pela Hotmart.**
+**Pagamento processado pela Kirvano.**
 
 ## Observação
 
@@ -265,7 +265,7 @@ Não criar desconto, preço anterior, escassez ou urgência que não existam.
 
 ## Microcopy
 
-**Pagamento processado pela Hotmart.**
+**Pagamento processado pela Kirvano.**
 
 ---
 
@@ -315,7 +315,7 @@ Não é preciso depender de encontrar novamente aquele vídeo.
 
 O produto é um ebook em PDF.
 
-**[CONFIRMAR MÉTODO EXATO DE ENTREGA PELA HOTMART]**
+**[CONFIRMAR MÉTODO EXATO DE ENTREGA PELA KIRVANO]**
 
 ---
 
@@ -325,7 +325,7 @@ O produto é um ebook em PDF.
 
 **Resposta:**
 
-A compra é processada pela Hotmart.
+A compra é processada pela Kirvano.
 
 **[REVISAR TEXTO FINAL DE SEGURANÇA DE ACORDO COM AS INFORMAÇÕES OFICIAIS DA PLATAFORMA]**
 
@@ -361,7 +361,7 @@ O Livro da Vovó Zefa está aqui para você conhecer, guardar e consultar quando
 
 ## Microcopy
 
-**Pagamento processado pela Hotmart.**
+**Pagamento processado pela Kirvano.**
 
 ---
 

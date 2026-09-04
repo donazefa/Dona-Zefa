@@ -338,7 +338,7 @@ Ainda não confirmado:
 - entrega por e-mail;
 - download direto;
 - área de membros;
-- outro método de entrega da Hotmart.
+- outro método de entrega da Kirvano.
 
 ### Regra
 

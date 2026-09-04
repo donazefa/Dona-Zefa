@@ -340,9 +340,9 @@ Não utilizar:
 
 Reduzir risco percebido.
 
-## Hotmart
+## Kirvano
 
-A compra é processada pela Hotmart.
+A compra é processada pela Kirvano.
 
 O método exato de entrega e as condições específicas de segurança devem ser comunicados somente de acordo com informações confirmadas.
 
@@ -388,7 +388,7 @@ Aguardar confirmação do método de entrega.
 
 ### É seguro comprar?
 
-Explicar a compra pela Hotmart sem fazer afirmações não verificadas.
+Explicar a compra pela Kirvano sem fazer afirmações não verificadas.
 
 ### E se eu não gostar?
 
@@ -617,7 +617,7 @@ ou
 - letra grande;
 - temas gerais: dinheiro, amor e proteção;
 - +100 mil seguidores em aproximadamente 40 dias;
-- venda planejada via página de vendas → Hotmart.
+- venda planejada via página de vendas → Kirvano.
 
 ## Pendente
 
