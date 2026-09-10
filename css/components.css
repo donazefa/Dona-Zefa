@@ -69,8 +69,8 @@
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  background: rgba(26, 14, 7, 0.90);
-  color: var(--color-gold-bright);
+  background: rgba(22, 11, 5, 0.92);
+  color: #FAF4EB;
   padding: 6px 18px;
   border-radius: var(--radius-pill);
   font-family: var(--font-sans);
@@ -78,17 +78,21 @@
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  border: 1px solid rgba(232, 186, 104, 0.65);
-  box-shadow: 0 0 16px rgba(232, 186, 104, 0.22), inset 0 0 8px rgba(232, 186, 104, 0.1);
+  border: 1px solid rgba(232, 186, 104, 0.6);
+  box-shadow: 0 0 16px rgba(232, 186, 104, 0.18), inset 0 0 8px rgba(232, 186, 104, 0.08);
+}
+
+.hero-tag .ornament-symbol {
+  color: #E8BA68;
 }
 
 .hero-subheadline-amber {
   font-style: italic;
-  color: #E8BA68 !important;
-  font-size: 1.22rem !important;
-  line-height: 1.55 !important;
+  color: #FAF4EB !important;
+  font-size: 1.25rem !important;
+  line-height: 1.6 !important;
   margin-bottom: var(--space-5) !important;
-  text-shadow: 0 0 14px rgba(232, 186, 104, 0.25);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.65);
 }
 
 .hero-cta-wrapper {
@@ -99,29 +103,57 @@
   gap: var(--space-3);
 }
 
+/* Botão Principal do Hero — Terracota Brasa Viva com Microanimação de Respiro */
 .btn-hero {
-  background: linear-gradient(135deg, #A43C1E 0%, #872E15 100%) !important;
-  color: #FFFFFF !important;
-  border: 1px solid rgba(245, 211, 142, 0.6) !important;
+  background: linear-gradient(135deg, #C7441E 0%, #9E3314 100%) !important;
+  color: #FAF4EB !important;
+  border: 1px solid rgba(245, 211, 142, 0.5) !important;
   padding: 16px 36px !important;
   font-family: var(--font-display) !important;
   font-size: 1.15rem !important;
-  letter-spacing: 0.02em;
+  font-weight: 700 !important;
+  letter-spacing: 0.03em;
   border-radius: var(--radius-pill) !important;
-  box-shadow: 0 8px 25px rgba(164, 60, 30, 0.45), 0 0 20px rgba(232, 186, 104, 0.28) !important;
+  box-shadow: 0 8px 22px rgba(158, 51, 20, 0.42), 0 0 14px rgba(232, 186, 104, 0.16) !important;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 12px;
   text-decoration: none;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  animation: heroButtonBreathe 3.5s ease-in-out infinite;
+  position: relative;
+}
+
+@keyframes heroButtonBreathe {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 8px 22px rgba(158, 51, 20, 0.42), 0 0 14px rgba(232, 186, 104, 0.16);
+    border-color: rgba(245, 211, 142, 0.5);
+  }
+  50% {
+    transform: scale(1.018);
+    box-shadow: 0 10px 28px rgba(199, 68, 30, 0.55), 0 0 20px rgba(232, 186, 104, 0.30);
+    border-color: rgba(245, 211, 142, 0.75);
+  }
 }
 
 .btn-hero:hover {
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 12px 30px rgba(164, 60, 30, 0.6), 0 0 30px rgba(232, 186, 104, 0.45) !important;
-  background: linear-gradient(135deg, #B54522 0%, #943217 100%) !important;
+  transform: translateY(-2px) scale(1.03) !important;
+  box-shadow: 0 12px 32px rgba(199, 68, 30, 0.65), 0 0 28px rgba(232, 186, 104, 0.4) !important;
+  background: linear-gradient(135deg, #D44E26 0%, #A83817 100%) !important;
+  color: #FFFFFF !important;
+}
+
+.btn-hero:active {
+  transform: translateY(0) scale(0.99) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-hero {
+    animation: none !important;
+  }
 }
 
 /* ==========================================================================
@@ -311,23 +343,27 @@
   bottom: var(--space-4);
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(15, 8, 3, 0.96);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  color: var(--color-gold-bright);
-  border: 1px solid rgba(194, 144, 56, 0.55);
-  padding: var(--space-2) var(--space-6);
+  background: rgba(14, 7, 3, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #FAF4EB;
+  border: 1px solid rgba(232, 186, 104, 0.7);
+  padding: 8px 24px;
   border-radius: var(--radius-pill);
   font-family: var(--font-display);
-  font-size: var(--font-size-micro);
+  font-size: 0.85rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   white-space: nowrap;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.65), 0 0 12px rgba(232, 186, 104, 0.25);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.75), 0 0 16px rgba(232, 186, 104, 0.22), inset 0 1px 0 rgba(245, 211, 142, 0.25);
   display: flex;
   align-items: center;
   gap: var(--space-2);
+}
+
+.portrait-nameplate .ornament-symbol {
+  color: #E8BA68;
 }
 
 /* ==========================================================================
@@ -2002,13 +2038,30 @@
   color: #FFFDF9 !important;
 }
 
-/* Grupo de CTAs do Hero */
+/* Grupo de CTA do Hero */
 .hero-cta-group {
   margin-top: var(--space-6);
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  gap: var(--space-3);
+}
+
+@media (max-width: 600px) {
+  .hero-cta-group {
+    margin-top: var(--space-6);
+    width: 100%;
+    justify-content: center;
+  }
+
+  .btn-hero {
+    width: 100%;
+    max-width: 380px;
+    padding: 18px 24px !important;
+    font-size: 1.08rem !important;
+    line-height: 1.35;
+    text-align: center;
+    border-radius: var(--radius-pill) !important;
+    box-shadow: 0 8px 25px rgba(158, 51, 20, 0.5), 0 0 18px rgba(232, 186, 104, 0.22) !important;
+  }
 }
 
 /* Destaque animado no card de oferta ao clicar em CTA de checkout */
