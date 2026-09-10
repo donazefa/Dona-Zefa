@@ -557,42 +557,62 @@
   border-color: var(--color-border-gold-strong);
 }
 
-/* Medalhões em Xilogravura / Gravura Botânica — Etapa 2 */
-.pillar-icon-wrapper {
-  width: 92px;
-  height: 92px;
-  border-radius: 50%;
-  background:
-    radial-gradient(circle at 35% 30%, #FFFDF6 0%, #F6E7CE 50%, #E2C99B 100%);
-  color: var(--color-primary-terracotta);
+/* ==========================================================================
+   Composições Ilustradas dos 3 Eixos (Dinheiro, Amor, Proteção)
+   ========================================================================== */
+.pillar-illustration-box {
+  width: 100%;
+  max-width: 220px;
+  height: 124px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: var(--space-4);
-  border: 2.5px solid #C29038;
-  outline: 1.5px solid rgba(194, 144, 56, 0.45);
-  outline-offset: 5px;
-  box-shadow:
-    inset 0 0 22px rgba(194, 144, 56, 0.30),
-    inset 0 2px 5px rgba(255, 255, 255, 0.9),
-    0 8px 22px rgba(36, 23, 14, 0.14),
-    0 0 0 7px rgba(194, 144, 56, 0.08);
+  margin: 0 auto var(--space-4);
   position: relative;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+  filter: drop-shadow(0 4px 12px rgba(36, 23, 14, 0.08));
 }
 
-.pillar-card:hover .pillar-icon-wrapper {
-  transform: scale(1.06);
-  box-shadow:
-    inset 0 0 26px rgba(194, 144, 56, 0.42),
-    0 10px 28px rgba(158, 71, 42, 0.28),
-    0 0 0 8px rgba(194, 144, 56, 0.15);
+.pillar-card:hover .pillar-illustration-box {
+  transform: translateY(-4px) scale(1.04);
+  filter: drop-shadow(0 8px 18px rgba(194, 144, 56, 0.22));
 }
 
-.pillar-icon-wrapper svg {
-  width: 48px;
-  height: 48px;
-  filter: drop-shadow(0 2px 4px rgba(36, 23, 14, 0.20));
+.pillar-illustration-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: visible;
+}
+
+/* Diferenciação sutil por cor nas etiquetas dos temas */
+.pillar-tag-money {
+  color: #7D4E0E !important;
+  background: rgba(194, 144, 56, 0.12) !important;
+  border-color: rgba(194, 144, 56, 0.38) !important;
+}
+
+.pillar-tag-love {
+  color: #9E3E26 !important;
+  background: rgba(168, 61, 36, 0.10) !important;
+  border-color: rgba(168, 61, 36, 0.30) !important;
+}
+
+.pillar-tag-protection {
+  color: #1E4D38 !important;
+  background: rgba(30, 77, 56, 0.10) !important;
+  border-color: rgba(30, 77, 56, 0.30) !important;
+}
+
+@media (max-width: 767px) {
+  .pillar-card {
+    padding: var(--space-6) var(--space-5) var(--space-5);
+  }
+  .pillar-illustration-box {
+    max-width: 195px;
+    height: 112px;
+    margin-bottom: var(--space-3);
+  }
 }
 
 .pillar-subtitle-tag {

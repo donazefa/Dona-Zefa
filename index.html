@@ -136,40 +136,108 @@
 
         <div class="grid-3">
           
-          <!-- Eixo 1: Dinheiro -->
+          <!-- Eixo 1: Dinheiro / Prosperidade -->
           <article class="pillar-card reveal-on-scroll">
             <div class="pillar-card-bottom-corners" aria-hidden="true"></div>
             
-            <div class="pillar-icon-wrapper" aria-hidden="true">
-              <!-- Medalhão Xilogravura: Chave Ancestral de Latão com Moedas e Ramos de Trigo -->
-              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                <!-- Argola da chave com detalhes de gravura -->
-                <circle cx="19" cy="9.5" r="5.5" stroke-width="1.6"/>
-                <circle cx="19" cy="9.5" r="3" stroke-width="0.9"/>
-                <!-- Raio interno da argola -->
-                <path d="M19 6.5 L19 12.5 M16 9.5 L22 9.5" stroke-width="0.7" opacity="0.6"/>
-                <!-- Haste principal -->
-                <path d="M19 15 L19 31" stroke-width="1.7"/>
-                <!-- Dentes da chave -->
-                <path d="M19 21 L22.5 21 L22.5 24 L19 24" stroke-width="1.3"/>
-                <path d="M19 26 L23.5 26 L23.5 28.5 L19 28.5" stroke-width="1.1"/>
-                <!-- Ramo de trigo esquerdo -->
-                <path d="M13 31 Q16 27 19 24" stroke-width="1"/>
-                <path d="M11 27 Q13 26 14 28" stroke-width="0.8" opacity="0.7"/>
-                <path d="M10.5 23.5 Q12.5 22.5 13.5 25" stroke-width="0.8" opacity="0.65"/>
-                <path d="M11 20 Q13 19 13.5 21.5" stroke-width="0.7" opacity="0.6"/>
-                <!-- Ramo de trigo direito -->
-                <path d="M25 31 Q22 27 19 24" stroke-width="1"/>
-                <path d="M27 27 Q25 26 24 28" stroke-width="0.8" opacity="0.7"/>
-                <path d="M27.5 23.5 Q25.5 22.5 24.5 25" stroke-width="0.8" opacity="0.65"/>
-                <path d="M27 20 Q25 19 24.5 21.5" stroke-width="0.7" opacity="0.6"/>
-                <!-- Brilho de moeda no canto -->
-                <circle cx="7" cy="14" r="2.5" stroke-width="0.9" opacity="0.5"/>
-                <path d="M7 12 L7 16 M5 14 L9 14" stroke-width="0.6" opacity="0.4"/>
+            <div class="pillar-illustration-box pillar-theme-money" aria-hidden="true">
+              <svg viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="pillar-illustration-svg" aria-hidden="true">
+                <defs>
+                  <linearGradient id="goldCoinGrad" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#FFF4D0"/>
+                    <stop offset="30%" stop-color="#E8BA68"/>
+                    <stop offset="70%" stop-color="#C29038"/>
+                    <stop offset="100%" stop-color="#8C5C15"/>
+                  </linearGradient>
+                  <linearGradient id="goldKeyGrad" x1="0" y1="0" x2="1" y2="0.8">
+                    <stop offset="0%" stop-color="#FCE5A2"/>
+                    <stop offset="50%" stop-color="#C29038"/>
+                    <stop offset="100%" stop-color="#70440C"/>
+                  </linearGradient>
+                  <radialGradient id="sunburstMoney" cx="50%" cy="55%" r="50%">
+                    <stop offset="0%" stop-color="rgba(232, 186, 104, 0.28)"/>
+                    <stop offset="70%" stop-color="rgba(194, 144, 56, 0.08)"/>
+                    <stop offset="100%" stop-color="transparent"/>
+                  </radialGradient>
+                </defs>
+
+                <!-- Halo de Fundo -->
+                <ellipse cx="100" cy="62" rx="72" ry="45" fill="url(#sunburstMoney)"/>
+
+                <!-- Raios de Prosperidade e Caminhos Abertos -->
+                <g stroke="#C29038" stroke-width="0.75" stroke-dasharray="2 3" opacity="0.45">
+                  <line x1="100" y1="20" x2="100" y2="32"/>
+                  <line x1="70" y1="28" x2="78" y2="38"/>
+                  <line x1="130" y1="28" x2="122" y2="38"/>
+                  <line x1="48" y1="48" x2="60" y2="54"/>
+                  <line x1="152" y1="48" x2="140" y2="54"/>
+                </g>
+
+                <!-- Chave Ancestral de Latão (Caminhos Abertos) Cruzada em Ângulo -->
+                <g transform="translate(100, 60) rotate(-28) translate(-50, -10)">
+                  <circle cx="15" cy="10" r="10" stroke="url(#goldKeyGrad)" stroke-width="2.2" fill="#FAF5EA"/>
+                  <circle cx="15" cy="10" r="6" stroke="#8C5C15" stroke-width="0.9" fill="none"/>
+                  <circle cx="15" cy="10" r="2.5" fill="#C29038"/>
+                  <path d="M25 10 L82 10" stroke="url(#goldKeyGrad)" stroke-width="2.8" stroke-linecap="round"/>
+                  <path d="M72 10 L72 17 M78 10 L78 20 L84 20 L84 10" stroke="url(#goldKeyGrad)" stroke-width="2" stroke-linejoin="round" fill="none"/>
+                  <circle cx="50" cy="10" r="2.2" fill="#8C5C15"/>
+                </g>
+
+                <!-- Ramos de Trigo e Louro da Fartura (Verde Oliva Envelhecido + Ouro) -->
+                <g stroke="#3B583E" fill="#4A6B4E" stroke-width="0.8">
+                  <path d="M96 95 Q65 92 42 70" stroke-width="1.2" fill="none"/>
+                  <path d="M42 70 Q48 64 56 68 Q49 75 42 70 Z"/>
+                  <path d="M52 74 Q60 67 67 73 Q60 79 52 74 Z"/>
+                  <path d="M63 80 Q71 74 78 80 Q71 86 63 80 Z"/>
+                  <path d="M75 87 Q84 81 90 88 Q82 93 75 87 Z"/>
+                  <circle cx="48" cy="62" r="1.8" fill="#E8BA68" stroke="#8C5C15" stroke-width="0.5"/>
+                  <circle cx="58" cy="67" r="1.8" fill="#E8BA68" stroke="#8C5C15" stroke-width="0.5"/>
+                  <circle cx="69" cy="73" r="1.8" fill="#E8BA68" stroke="#8C5C15" stroke-width="0.5"/>
+                </g>
+                <g stroke="#3B583E" fill="#4A6B4E" stroke-width="0.8">
+                  <path d="M104 95 Q135 92 158 70" stroke-width="1.2" fill="none"/>
+                  <path d="M158 70 Q152 64 144 68 Q151 75 158 70 Z"/>
+                  <path d="M148 74 Q140 67 133 73 Q140 79 148 74 Z"/>
+                  <path d="M137 80 Q129 74 122 80 Q129 86 137 80 Z"/>
+                  <path d="M125 87 Q116 81 110 88 Q118 93 125 87 Z"/>
+                  <circle cx="152" cy="62" r="1.8" fill="#E8BA68" stroke="#8C5C15" stroke-width="0.5"/>
+                  <circle cx="142" cy="67" r="1.8" fill="#E8BA68" stroke="#8C5C15" stroke-width="0.5"/>
+                  <circle cx="131" cy="73" r="1.8" fill="#E8BA68" stroke="#8C5C15" stroke-width="0.5"/>
+                </g>
+
+                <!-- Moedas Antigas de Ouro com Entalhes Nobres -->
+                <g transform="translate(74, 52)">
+                  <circle cx="16" cy="16" r="16" fill="url(#goldCoinGrad)" stroke="#70440C" stroke-width="1"/>
+                  <circle cx="16" cy="16" r="13" stroke="#8C5C15" stroke-dasharray="1.5 1.5" stroke-width="0.8" fill="none"/>
+                  <polygon points="16,6 18.5,13 26,13 20,17.5 22.5,24.5 16,20 9.5,24.5 12,17.5 6,13 13.5,13" fill="#FFF4D0" opacity="0.6"/>
+                </g>
+
+                <g transform="translate(108, 55)">
+                  <circle cx="15" cy="15" r="15" fill="url(#goldCoinGrad)" stroke="#70440C" stroke-width="1"/>
+                  <circle cx="15" cy="15" r="12" stroke="#8C5C15" stroke-dasharray="1.5 1.5" stroke-width="0.8" fill="none"/>
+                  <path d="M15 8 L15 22 M8 15 L22 15" stroke="#70440C" stroke-width="1.2"/>
+                  <circle cx="15" cy="15" r="4" fill="#FFF4D0" opacity="0.75"/>
+                </g>
+
+                <!-- Moeda Central Principal -->
+                <g transform="translate(86, 44)">
+                  <circle cx="20" cy="20" r="20" fill="url(#goldCoinGrad)" stroke="#613A08" stroke-width="1.3"/>
+                  <circle cx="20" cy="20" r="17" stroke="#70440C" stroke-dasharray="2 1.5" stroke-width="1" fill="none"/>
+                  <circle cx="20" cy="20" r="14.5" stroke="#FFF4D0" stroke-width="0.7" fill="#FAF5EA" fill-opacity="0.2"/>
+                  <path d="M20 9 L22.5 16.5 L30 14 L24.5 19.5 L31 22 L24.5 24.5 L30 30 L22.5 27.5 L20 35 L17.5 27.5 L10 30 L15.5 24.5 L9 22 L15.5 19.5 L10 14 L17.5 16.5 Z" fill="#C29038" stroke="#8C5C15" stroke-width="0.6"/>
+                  <circle cx="20" cy="22" r="4" fill="#FFF4D0"/>
+                  <circle cx="20" cy="22" r="2" fill="#70440C"/>
+                </g>
+
+                <!-- Faíscas de Prosperidade -->
+                <g fill="#E8BA68">
+                  <path d="M62 42 L63.5 45 L66.5 46.5 L63.5 48 L62 51 L60.5 48 L57.5 46.5 L60.5 45 Z"/>
+                  <path d="M142 40 L143.5 43 L146.5 44.5 L143.5 46 L142 49 L140.5 46 L137.5 44.5 L140.5 43 Z"/>
+                </g>
               </svg>
             </div>
             
-            <span class="pillar-subtitle-tag">
+            <span class="pillar-subtitle-tag pillar-tag-money">
               <span>✦</span> Caminhos e Abundância <span>✦</span>
             </span>
             <h3 class="pillar-title">Caminhos e Vida Financeira</h3>
@@ -186,39 +254,95 @@
             </div>
           </article>
 
-          <!-- Eixo 2: Amor -->
+          <!-- Eixo 2: Amor / Sentimentos -->
           <article class="pillar-card reveal-on-scroll">
             <div class="pillar-card-bottom-corners" aria-hidden="true"></div>
             
-            <div class="pillar-icon-wrapper" aria-hidden="true">
-              <!-- Medalhão Xilogravura: Coração Botânico com Raízes de Arruda e Florescimento -->
-              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                <!-- Silhueta do coração com linhas de gravura -->
-                <path d="M20 32 S8 23 8 14.5 a6.5 6.5 0 0 1 12-3.4 6.5 6.5 0 0 1 12 3.4 C32 23 20 32 20 32z" stroke-width="1.7"/>
-                <!-- Veios internos de xilogravura -->
-                <path d="M20 15 Q18 18 17 21" stroke-width="0.8" opacity="0.55"/>
-                <path d="M20 15 Q22 18 23 21" stroke-width="0.8" opacity="0.55"/>
-                <!-- Ramo florescente saindo do topo esquerdo -->
-                <path d="M13.5 11 Q11 8 9.5 9.5" stroke-width="0.9" opacity="0.65"/>
-                <path d="M11 9 Q10 7 11.5 6.5" stroke-width="0.7" opacity="0.6"/>
-                <path d="M13 8 Q13.5 6 15 6.5" stroke-width="0.7" opacity="0.55"/>
-                <!-- Florzinha superior central -->
-                <circle cx="20" cy="6.5" r="1.2" fill="currentColor" opacity="0.5"/>
-                <path d="M20 5 L20 3.5 M18.5 5.5 L17.5 4.5 M21.5 5.5 L22.5 4.5 M18 6.5 L16.5 6.5 M22 6.5 L23.5 6.5" stroke-width="0.6" opacity="0.5"/>
-                <!-- Ramo florescente topo direito -->
-                <path d="M26.5 11 Q29 8 30.5 9.5" stroke-width="0.9" opacity="0.65"/>
-                <path d="M29 9 Q30 7 28.5 6.5" stroke-width="0.7" opacity="0.6"/>
-                <path d="M27 8 Q26.5 6 25 6.5" stroke-width="0.7" opacity="0.55"/>
+            <div class="pillar-illustration-box pillar-theme-love" aria-hidden="true">
+              <svg viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="pillar-illustration-svg" aria-hidden="true">
+                <defs>
+                  <linearGradient id="heartTerracottaGrad" x1="0" y1="0" x2="0.8" y2="1">
+                    <stop offset="0%" stop-color="#C75232"/>
+                    <stop offset="45%" stop-color="#A83D24"/>
+                    <stop offset="100%" stop-color="#732410"/>
+                  </linearGradient>
+                  <radialGradient id="sunburstLove" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="rgba(199, 82, 50, 0.22)"/>
+                    <stop offset="70%" stop-color="rgba(194, 144, 56, 0.08)"/>
+                    <stop offset="100%" stop-color="transparent"/>
+                  </radialGradient>
+                  <linearGradient id="goldRingGrad" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#FFF5D6"/>
+                    <stop offset="50%" stop-color="#D4A23D"/>
+                    <stop offset="100%" stop-color="#8C5C15"/>
+                  </linearGradient>
+                </defs>
+
+                <!-- Halo de Afeto -->
+                <ellipse cx="100" cy="58" rx="70" ry="44" fill="url(#sunburstLove)"/>
+
+                <!-- Ramos de Rosas Antigas Envolvendo o Coração -->
+                <g stroke="#8A422E" fill="none" stroke-width="1.1">
+                  <path d="M96 96 Q60 92 46 64 Q42 46 56 32"/>
+                  <path d="M52 78 Q42 74 46 66 Q54 70 52 78 Z" fill="#58634B" stroke="#3D4733" stroke-width="0.7"/>
+                  <path d="M46 58 Q36 54 40 46 Q48 50 46 58 Z" fill="#58634B" stroke="#3D4733" stroke-width="0.7"/>
+                  <path d="M50 42 Q44 32 54 30 Q56 38 50 42 Z" fill="#58634B" stroke="#3D4733" stroke-width="0.7"/>
+                  <g transform="translate(42, 48)">
+                    <circle cx="8" cy="8" r="6.5" fill="#B8492D" stroke="#732410" stroke-width="0.8"/>
+                    <path d="M5 8 Q8 4 11 8 Q8 12 5 8 Z" fill="#FAF5EA" opacity="0.6"/>
+                    <path d="M6 6 Q8 9 10 6" stroke="#FAF5EA" stroke-width="0.7"/>
+                  </g>
+                </g>
+
+                <g stroke="#8A422E" fill="none" stroke-width="1.1">
+                  <path d="M104 96 Q140 92 154 64 Q158 46 144 32"/>
+                  <path d="M148 78 Q158 74 154 66 Q146 70 148 78 Z" fill="#58634B" stroke="#3D4733" stroke-width="0.7"/>
+                  <path d="M154 58 Q164 54 160 46 Q152 50 154 58 Z" fill="#58634B" stroke="#3D4733" stroke-width="0.7"/>
+                  <path d="M150 42 Q156 32 146 30 Q144 38 150 42 Z" fill="#58634B" stroke="#3D4733" stroke-width="0.7"/>
+                  <g transform="translate(142, 48)">
+                    <circle cx="8" cy="8" r="6.5" fill="#B8492D" stroke="#732410" stroke-width="0.8"/>
+                    <path d="M5 8 Q8 4 11 8 Q8 12 5 8 Z" fill="#FAF5EA" opacity="0.6"/>
+                    <path d="M6 6 Q8 9 10 6" stroke="#FAF5EA" stroke-width="0.7"/>
+                  </g>
+                </g>
+
+                <!-- Coração Nobre Entalhado em Xilogravura Clássica -->
+                <g transform="translate(100, 52)">
+                  <path d="M0 38 C-28 20 -40 2 -40 -12 C-40 -26 -26 -34 -14 -28 C-6 -24 0 -16 0 -16 C0 -16 6 -24 14 -28 C26 -34 40 -26 40 -12 C40 2 28 20 0 38 Z" fill="#FAF5EA" stroke="#C29038" stroke-width="2.5"/>
+                  <path d="M0 36 C-26 19 -37 2 -37 -11 C-37 -23 -24 -31 -13 -25 C-5 -22 0 -14 0 -14 C0 -14 5 -22 13 -25 C24 -31 37 -23 37 -11 C37 2 26 19 0 36 Z" fill="url(#heartTerracottaGrad)" stroke="#5E1B0A" stroke-width="1.2"/>
+                  
+                  <!-- Linhas Artísticas de Xilogravura Interna -->
+                  <path d="M-22 -14 Q-14 -22 -6 -16" stroke="#FAF5EA" stroke-width="1" stroke-linecap="round" opacity="0.65"/>
+                  <path d="M-28 -4 Q-20 -16 -10 -8" stroke="#FAF5EA" stroke-width="0.8" stroke-linecap="round" opacity="0.45"/>
+                  <path d="M-24 8 Q-16 0 -8 6" stroke="#FAF5EA" stroke-width="0.7" stroke-linecap="round" opacity="0.35"/>
+                  <path d="M0 24 C-16 12 -22 2 -22 -6" stroke="#F5D38E" stroke-width="0.9" stroke-linecap="round" opacity="0.6"/>
+                  <circle cx="0" cy="-28" r="2.2" fill="#FAF5EA" stroke="#C29038" stroke-width="0.8"/>
+                </g>
+
+                <!-- Duas Alianças Douradas de União na Base do Coração -->
+                <g transform="translate(100, 93)">
+                  <ellipse cx="-7" cy="0" rx="9" ry="6.5" fill="none" stroke="url(#goldRingGrad)" stroke-width="2"/>
+                  <ellipse cx="-7" cy="0" rx="7.2" ry="4.8" fill="none" stroke="#70440C" stroke-width="0.6"/>
+                  <ellipse cx="7" cy="0" rx="9" ry="6.5" fill="none" stroke="url(#goldRingGrad)" stroke-width="2"/>
+                  <ellipse cx="7" cy="0" rx="7.2" ry="4.8" fill="none" stroke="#70440C" stroke-width="0.6"/>
+                  <circle cx="0" cy="-2" r="2" fill="#FFF5D6"/>
+                </g>
+
+                <!-- Faíscas de Afeto e Luz -->
+                <g fill="#E8BA68">
+                  <path d="M65 30 L66.5 33 L69.5 34.5 L66.5 36 L65 39 L63.5 36 L60.5 34.5 L63.5 33 Z"/>
+                  <path d="M135 30 L136.5 33 L139.5 34.5 L136.5 36 L135 39 L133.5 36 L130.5 34.5 L133.5 33 Z"/>
+                </g>
               </svg>
             </div>
             
-            <span class="pillar-subtitle-tag">
+            <span class="pillar-subtitle-tag pillar-tag-love">
               <span>✦</span> União e Acalento <span>✦</span>
             </span>
             <h3 class="pillar-title">Coração e Sentimentos</h3>
             <p>Às vezes é o coração que fica apertado por causa de alguém.</p>
             
-            <!-- Divisor Botânico de Flores e Arruda -->
+            <!-- Divisor Botânico de Flores e Rosas -->
             <div class="pillar-botanical-footer" aria-hidden="true">
               <svg viewBox="0 0 120 16" fill="none" stroke="currentColor">
                 <line x1="10" y1="8" x2="45" y2="8" stroke-width="0.7" opacity="0.5"/>
@@ -229,40 +353,106 @@
             </div>
           </article>
 
-          <!-- Eixo 3: Proteção -->
+          <!-- Eixo 3: Proteção / Firmeza -->
           <article class="pillar-card reveal-on-scroll">
             <div class="pillar-card-bottom-corners" aria-hidden="true"></div>
             
-            <div class="pillar-icon-wrapper" aria-hidden="true">
-              <!-- Medalhão Xilogravura: Escudo com Ramos de Alecrim e Proteção -->
-              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                <!-- Escudo principal com linhas de corte de madeira -->
-                <path d="M20 4 L31 8.5 V19 C31 27 24.5 33.5 20 35.5 C15.5 33.5 9 27 9 19 V8.5 Z" stroke-width="1.6"/>
-                <!-- Hachura interna de xilogravura (textura de gravura) -->
-                <path d="M14 12 Q16 15 14 18" stroke-width="0.6" opacity="0.35"/>
-                <path d="M26 12 Q24 15 26 18" stroke-width="0.6" opacity="0.35"/>
-                <!-- Cruz protetora central -->
-                <path d="M20 11 L20 27" stroke-width="1.3"/>
-                <path d="M13 19 L27 19" stroke-width="1.3"/>
-                <!-- Círculo central com luz -->
-                <circle cx="20" cy="19" r="3.5" stroke-width="1.1"/>
-                <circle cx="20" cy="19" r="1.2" fill="currentColor" opacity="0.6"/>
-                <!-- Ramos de alecrim saindo do escudo -->
-                <path d="M9 19 Q5 16 4 13" stroke-width="0.9" opacity="0.6"/>
-                <path d="M5 14 Q4 12 5.5 11.5" stroke-width="0.7" opacity="0.5"/>
-                <path d="M6 16.5 Q4.5 15.5 5.5 14" stroke-width="0.7" opacity="0.5"/>
-                <path d="M31 19 Q35 16 36 13" stroke-width="0.9" opacity="0.6"/>
-                <path d="M35 14 Q36 12 34.5 11.5" stroke-width="0.7" opacity="0.5"/>
-                <path d="M34 16.5 Q35.5 15.5 34.5 14" stroke-width="0.7" opacity="0.5"/>
-                <!-- Raios de proteção nos cantos -->
-                <path d="M14.5 13.5 L16 15" stroke-width="0.8" opacity="0.55"/>
-                <path d="M25.5 13.5 L24 15" stroke-width="0.8" opacity="0.55"/>
-                <path d="M14.5 24.5 L16 23" stroke-width="0.8" opacity="0.55"/>
-                <path d="M25.5 24.5 L24 23" stroke-width="0.8" opacity="0.55"/>
+            <div class="pillar-illustration-box pillar-theme-protection" aria-hidden="true">
+              <svg viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="pillar-illustration-svg" aria-hidden="true">
+                <defs>
+                  <linearGradient id="shieldMetalGrad" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#2A3844"/>
+                    <stop offset="50%" stop-color="#18232C"/>
+                    <stop offset="100%" stop-color="#0E161C"/>
+                  </linearGradient>
+                  <linearGradient id="shieldGoldBorder" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#FFF2CE"/>
+                    <stop offset="40%" stop-color="#D4A23D"/>
+                    <stop offset="80%" stop-color="#8C5C15"/>
+                    <stop offset="100%" stop-color="#54350A"/>
+                  </linearGradient>
+                  <linearGradient id="flameProtectionGrad" x1="0" y1="1" x2="0" y2="0">
+                    <stop offset="0%" stop-color="#C7441E"/>
+                    <stop offset="45%" stop-color="#E89D30"/>
+                    <stop offset="80%" stop-color="#FCE182"/>
+                    <stop offset="100%" stop-color="#FFFFFF"/>
+                  </linearGradient>
+                  <radialGradient id="sunburstProtection" cx="50%" cy="52%" r="50%">
+                    <stop offset="0%" stop-color="rgba(232, 186, 104, 0.32)"/>
+                    <stop offset="60%" stop-color="rgba(36, 69, 52, 0.12)"/>
+                    <stop offset="100%" stop-color="transparent"/>
+                  </radialGradient>
+                </defs>
+
+                <!-- Halo de Firmeza e Afastamento -->
+                <ellipse cx="100" cy="58" rx="72" ry="46" fill="url(#sunburstProtection)"/>
+
+                <!-- Círculo Concêntrico de Fechamento de Corpo -->
+                <circle cx="100" cy="58" r="48" stroke="#C29038" stroke-dasharray="2 3" stroke-width="0.8" opacity="0.45"/>
+
+                <!-- Ramos Protetores de Arruda e Alecrim (Verde Profundo) -->
+                <g stroke="#173628" fill="#244E3B" stroke-width="0.8">
+                  <path d="M96 95 Q62 92 46 66 Q40 50 48 36" stroke-width="1.3" fill="none"/>
+                  <ellipse cx="44" cy="62" rx="5" ry="3.5" transform="rotate(-30 44 62)"/>
+                  <ellipse cx="48" cy="52" rx="5" ry="3.5" transform="rotate(-15 48 52)"/>
+                  <ellipse cx="43" cy="42" rx="4.5" ry="3" transform="rotate(-40 43 42)"/>
+                  <ellipse cx="50" cy="34" rx="4" ry="2.8" transform="rotate(-10 50 34)"/>
+                  <path d="M56 74 Q48 70 52 78 Z"/>
+                  <path d="M68 84 Q60 80 64 88 Z"/>
+                  <circle cx="48" cy="34" r="1.2" fill="#E8BA68"/>
+                  <circle cx="42" cy="42" r="1.2" fill="#E8BA68"/>
+                </g>
+                <g stroke="#173628" fill="#244E3B" stroke-width="0.8">
+                  <path d="M104 95 Q138 92 154 66 Q160 50 152 36" stroke-width="1.3" fill="none"/>
+                  <path d="M154 66 Q163 61 157 56 Z"/>
+                  <path d="M152 56 Q161 51 154 46 Z"/>
+                  <path d="M156 46 Q164 41 156 37 Z"/>
+                  <path d="M152 36 Q158 30 150 28 Z"/>
+                  <path d="M144 74 Q152 70 148 78 Z"/>
+                  <path d="M132 84 Q140 80 136 88 Z"/>
+                  <circle cx="152" cy="36" r="1.2" fill="#E8BA68"/>
+                  <circle cx="156" cy="46" r="1.2" fill="#E8BA68"/>
+                </g>
+
+                <!-- Escudo Clássico Nobre de Proteção e Afastamento -->
+                <g transform="translate(100, 56)">
+                  <path d="M0 -34 L28 -24 C28 -8 30 18 0 36 C-30 18 -28 -8 -28 -24 Z" fill="#FAF5EA" stroke="url(#shieldGoldBorder)" stroke-width="2.6"/>
+                  <path d="M0 -31 L24 -22 C24 -7 26 15 0 31 C-26 15 -24 -7 -24 -22 Z" fill="url(#shieldMetalGrad)" stroke="#111B22" stroke-width="1"/>
+
+                  <!-- Cruz de Firmeza em Relevo Dourado -->
+                  <path d="M0 -22 L0 18 M-14 -8 L14 -8" stroke="#8C5C15" stroke-width="2.8" stroke-linecap="round"/>
+                  <path d="M0 -22 L0 18 M-14 -8 L14 -8" stroke="url(#shieldGoldBorder)" stroke-width="1.4" stroke-linecap="round"/>
+
+                  <!-- Vela Acesa Sagrada / Chama Central de Firmeza -->
+                  <rect x="-4" y="-3" width="8" height="15" rx="1.5" fill="#FAF5EA" stroke="#C29038" stroke-width="0.8"/>
+                  <line x1="0" y1="-3" x2="0" y2="-6" stroke="#4A3425" stroke-width="1.2"/>
+                  <path d="M0 -18 C3 -13 4 -9 0 -6 C-4 -9 -3 -13 0 -18 Z" fill="url(#flameProtectionGrad)"/>
+                  <ellipse cx="0" cy="-9" rx="1.5" ry="3" fill="#FFFFFF"/>
+
+                  <!-- Raios Dourados de Proteção e Clareamento -->
+                  <g stroke="#F5D38E" stroke-width="0.8" opacity="0.75">
+                    <line x1="-9" y1="-14" x2="-14" y2="-17"/>
+                    <line x1="9" y1="-14" x2="14" y2="-17"/>
+                    <line x1="-8" y1="-7" x2="-13" y2="-7"/>
+                    <line x1="8" y1="-7" x2="13" y2="-7"/>
+                  </g>
+
+                  <!-- Rebites / Cravos Dourados nos Cantos -->
+                  <circle cx="-18" cy="-18" r="1.5" fill="#D4A23D" stroke="#70440C" stroke-width="0.5"/>
+                  <circle cx="18" cy="-18" r="1.5" fill="#D4A23D" stroke="#70440C" stroke-width="0.5"/>
+                  <circle cx="-16" cy="6" r="1.5" fill="#D4A23D" stroke="#70440C" stroke-width="0.5"/>
+                  <circle cx="16" cy="6" r="1.5" fill="#D4A23D" stroke="#70440C" stroke-width="0.5"/>
+                </g>
+
+                <!-- Estrelas de Firmeza -->
+                <g fill="#E8BA68">
+                  <path d="M68 28 L69.5 31 L72.5 32.5 L69.5 34 L68 37 L66.5 34 L63.5 32.5 L66.5 31 Z"/>
+                  <path d="M132 28 L133.5 31 L136.5 32.5 L133.5 34 L132 37 L130.5 34 L127.5 32.5 L130.5 31 Z"/>
+                </g>
               </svg>
             </div>
             
-            <span class="pillar-subtitle-tag">
+            <span class="pillar-subtitle-tag pillar-tag-protection">
               <span>✦</span> Firmeza e Afastamento <span>✦</span>
             </span>
             <h3 class="pillar-title">Proteção e Firmeza</h3>
