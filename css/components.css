@@ -729,9 +729,10 @@
 }
 
 /* ==========================================================================
-   5. COMPARATIVO VISUAL (DESEJO & PERMANÊNCIA DO LIVRO)
+   5. NARRATIVA VISUAL & STORYTELLING: DA REDE SOCIAL AO LIVRO
+   Transição poética: O encontro efêmero em vídeo -> A permanência do livro
    ========================================================================== */
-.comparison-container {
+.story-experience-wrapper {
   background-color: #FAF5EB;
   border: 1.5px solid rgba(194, 144, 56, 0.45);
   border-radius: var(--radius-lg);
@@ -739,99 +740,200 @@
   box-shadow: 
     inset 0 0 0 4px #FFFDF9,
     inset 0 0 0 6px rgba(194, 144, 56, 0.22),
-    0 12px 35px rgba(36, 23, 14, 0.08);
+    0 16px 45px rgba(36, 23, 14, 0.09);
   background-image:
-    radial-gradient(circle at 50% 0%, rgba(232, 186, 104, 0.16) 0%, transparent 70%),
+    radial-gradient(circle at 50% 0%, rgba(232, 186, 104, 0.18) 0%, transparent 70%),
     url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='compGrain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23compGrain)' opacity='0.025'/%3E%3C/svg%3E");
   margin: var(--space-8) 0;
   position: relative;
 }
 
 @media (min-width: 768px) {
-  .comparison-container {
+  .story-experience-wrapper {
     padding: var(--space-8);
   }
 }
 
-.comparison-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-6);
-}
-
-@media (min-width: 768px) {
-  .comparison-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-6);
+@media (min-width: 992px) {
+  .story-experience-wrapper {
+    padding: var(--space-10) var(--space-8);
   }
 }
 
-/* Card 1: O Feed Efêmero (Desbotado / Passa Rápido) */
-.comparison-card-ephemeral {
-  background-color: #ECE4D8;
-  border: 1px solid rgba(120, 100, 85, 0.25);
-  border-radius: var(--radius-md);
-  padding: var(--space-6);
+/* Cantoneiras Nobres do Painel Geral */
+.story-experience-wrapper::before,
+.story-experience-wrapper::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+}
+
+.story-experience-wrapper::before {
+  top: 8px;
+  left: 8px;
+  border-top: 2px solid rgba(194, 144, 56, 0.7);
+  border-left: 2px solid rgba(194, 144, 56, 0.7);
+}
+
+.story-experience-wrapper::after {
+  top: 8px;
+  right: 8px;
+  border-top: 2px solid rgba(194, 144, 56, 0.7);
+  border-right: 2px solid rgba(194, 144, 56, 0.7);
+}
+
+/* Ato Narrativo (Grid de Mídia + Conteúdo) */
+.story-act {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  align-items: center;
+  position: relative;
+}
+
+@media (min-width: 900px) {
+  .story-act-video {
+    grid-template-columns: 340px 1fr;
+    gap: var(--space-8);
+  }
+  
+  .story-act-book {
+    grid-template-columns: 1fr 420px;
+    gap: var(--space-8);
+  }
+}
+
+@media (min-width: 1100px) {
+  .story-act-video {
+    grid-template-columns: 370px 1fr;
+    gap: var(--space-10);
+  }
+  
+  .story-act-book {
+    grid-template-columns: 1fr 470px;
+    gap: var(--space-10);
+  }
+}
+
+/* Coluna de Mídia */
+.story-media-col {
   display: flex;
   flex-direction: column;
-  position: relative;
-  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.04);
-}
-
-.comparison-card-ephemeral .comparison-tag {
-  display: inline-flex;
   align-items: center;
-  gap: var(--space-2);
-  font-family: var(--font-sans);
-  font-size: 0.76rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: #7A6555;
-  background: rgba(120, 100, 85, 0.12);
-  padding: 4px 12px;
-  border-radius: var(--radius-pill);
-  margin-bottom: var(--space-4);
-  width: fit-content;
+  position: relative;
 }
 
-.comparison-card-ephemeral h3 {
-  font-family: var(--font-display);
-  font-size: 1.28rem;
-  color: #4A3B30;
-  margin-bottom: var(--space-3);
+/* Moldura de Smartphone Editorial (Ato 1) */
+.story-smartphone-frame {
+  width: 100%;
+  max-width: 310px;
+  background: #19110B;
+  border: 2.5px solid #C29038;
+  border-radius: 36px;
+  padding: 10px;
+  box-shadow: 
+    0 16px 40px rgba(24, 16, 10, 0.32),
+    0 0 25px rgba(232, 186, 104, 0.22),
+    inset 0 0 10px rgba(0, 0, 0, 0.6);
+  position: relative;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.story-smartphone-frame:hover {
+  transform: translateY(-4px);
+  box-shadow: 
+    0 22px 48px rgba(24, 16, 10, 0.38),
+    0 0 35px rgba(232, 186, 104, 0.35);
+}
+
+.story-smartphone-screen {
+  border-radius: 26px;
+  overflow: hidden;
+  position: relative;
+  background: #000000;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.8);
+}
+
+.story-smartphone-screen img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.story-smartphone-frame:hover .story-smartphone-screen img {
+  transform: scale(1.02);
+}
+
+/* Brilho Reflexivo do Vidro do Smartphone */
+.story-smartphone-screen::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0) 55%);
+  pointer-events: none;
+}
+
+/* Legenda Sutil sob o Celular */
+.story-media-caption {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  color: #7A624E;
+  margin-top: var(--space-3);
+  text-align: center;
   display: flex;
   align-items: center;
-  gap: var(--space-2);
+  justify-content: center;
+  gap: var(--space-1);
 }
 
-.comparison-card-ephemeral p {
-  color: #6E5C4E;
-  font-size: 1.02rem;
-  line-height: 1.6;
-  margin: 0;
-}
-
-/* Card 2: O Livro Guardado (Pergaminho Nobre / Luz de Vela) */
-.comparison-card-permanent {
-  background-color: #FFFDF9;
+/* Moldura Nobre de Encadernação do Livro Aberto (Ato 2) */
+.story-book-frame {
+  width: 100%;
+  background: #FFFDF9;
   border: 1.5px solid rgba(194, 144, 56, 0.65);
   border-radius: var(--radius-md);
-  padding: var(--space-6);
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  box-shadow:
+  padding: 8px;
+  box-shadow: 
     inset 0 0 0 3px #FFFDF9,
-    inset 0 0 0 5px rgba(194, 144, 56, 0.3),
-    0 8px 24px rgba(158, 71, 42, 0.12),
-    0 0 20px rgba(232, 186, 104, 0.20);
-  background-image:
-    radial-gradient(circle at 50% 0%, rgba(232, 186, 104, 0.20) 0%, transparent 70%);
+    inset 0 0 0 5px rgba(194, 144, 56, 0.32),
+    0 16px 45px rgba(36, 23, 14, 0.12),
+    0 0 30px rgba(232, 186, 104, 0.25);
+  position: relative;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.comparison-card-permanent::before,
-.comparison-card-permanent::after {
+.story-book-frame:hover {
+  transform: translateY(-4px);
+  box-shadow: 
+    inset 0 0 0 3px #FFFDF9,
+    inset 0 0 0 5px rgba(194, 144, 56, 0.45),
+    0 22px 55px rgba(36, 23, 14, 0.16),
+    0 0 40px rgba(232, 186, 104, 0.35);
+}
+
+.story-book-inner {
+  border-radius: calc(var(--radius-md) - 4px);
+  overflow: hidden;
+  position: relative;
+}
+
+.story-book-inner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Cantoneiras Douradas do Livro */
+.story-book-frame::before,
+.story-book-frame::after {
   content: "";
   position: absolute;
   width: 14px;
@@ -839,53 +941,162 @@
   pointer-events: none;
 }
 
-.comparison-card-permanent::before {
-  top: 6px;
-  left: 6px;
-  border-top: 1.5px solid rgba(194, 144, 56, 0.7);
-  border-left: 1.5px solid rgba(194, 144, 56, 0.7);
+.story-book-frame::before {
+  top: 4px;
+  left: 4px;
+  border-top: 2px solid rgba(194, 144, 56, 0.85);
+  border-left: 2px solid rgba(194, 144, 56, 0.85);
 }
 
-.comparison-card-permanent::after {
-  top: 6px;
-  right: 6px;
-  border-top: 1.5px solid rgba(194, 144, 56, 0.7);
-  border-right: 1.5px solid rgba(194, 144, 56, 0.7);
+.story-book-frame::after {
+  top: 4px;
+  right: 4px;
+  border-top: 2px solid rgba(194, 144, 56, 0.85);
+  border-right: 2px solid rgba(194, 144, 56, 0.85);
 }
 
-.comparison-card-permanent .comparison-tag {
+/* Coluna de Conteúdo & Copy */
+.story-content-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.story-tag {
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
   font-family: var(--font-sans);
-  font-size: 0.76rem;
+  font-size: 0.78rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--color-primary-terracotta);
-  background: rgba(158, 71, 42, 0.10);
-  border: 1px solid rgba(158, 71, 42, 0.25);
-  padding: 4px 12px;
+  padding: 5px 14px;
   border-radius: var(--radius-pill);
-  margin-bottom: var(--space-4);
+  margin-bottom: var(--space-3);
   width: fit-content;
 }
 
-.comparison-card-permanent h3 {
+.story-tag-video {
+  color: #7A624E;
+  background: rgba(120, 100, 85, 0.12);
+  border: 1px solid rgba(120, 100, 85, 0.28);
+}
+
+.story-tag-book {
+  color: var(--color-primary-terracotta);
+  background: rgba(146, 54, 26, 0.10);
+  border: 1px solid rgba(146, 54, 26, 0.28);
+}
+
+.story-headline {
   font-family: var(--font-display);
-  font-size: 1.28rem;
+  font-size: 1.55rem;
   color: #24160E;
+  line-height: 1.28;
   margin-bottom: var(--space-3);
+}
+
+@media (min-width: 768px) {
+  .story-headline {
+    font-size: 1.75rem;
+  }
+}
+
+.story-lead {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.14rem;
+  color: #7A3F29;
+  line-height: 1.5;
+  margin-bottom: var(--space-3);
+}
+
+.story-text {
+  color: #4A382A;
+  font-size: 1.04rem;
+  line-height: 1.68;
+  margin-bottom: var(--space-4);
+}
+
+/* Box de Observação Afetuosa (Ato 1) */
+.story-reflection-box {
+  background: rgba(236, 228, 216, 0.65);
+  border-left: 3px solid #C29038;
+  padding: var(--space-3) var(--space-4);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-family: var(--font-serif);
+  font-size: 1.02rem;
+  color: #5C4736;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* Pílulas de Benefício do Livro (Ato 2) */
+.story-book-features {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+
+.story-feature-item {
   display: flex;
   align-items: center;
   gap: var(--space-2);
+  font-family: var(--font-sans);
+  font-size: 0.94rem;
+  font-weight: 600;
+  color: #382417;
 }
 
-.comparison-card-permanent p {
-  color: #4A382A;
-  font-size: 1.02rem;
-  line-height: 1.6;
-  margin: 0;
+.story-feature-item .feature-icon {
+  color: var(--color-gold-leaf);
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+/* Ponte de Transição Editorial entre os Dois Atos */
+.story-bridge-connector {
+  position: relative;
+  text-align: center;
+  margin: var(--space-8) 0;
+  padding: var(--space-5) var(--space-4);
+  background: radial-gradient(circle at 50% 50%, rgba(232, 186, 104, 0.16) 0%, transparent 75%);
+}
+
+.story-bridge-lines {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+.story-bridge-line {
+  flex: 1;
+  max-width: 140px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(194, 144, 56, 0.6), transparent);
+}
+
+.story-bridge-icon {
+  color: var(--color-gold-bright);
+  font-size: 1.1rem;
+}
+
+.story-bridge-quote {
+  font-family: var(--font-serif);
+  font-size: 1.18rem;
+  font-style: italic;
+  color: #7A3F29;
+  max-width: 620px;
+  margin: 0 auto;
+  line-height: 1.55;
+}
+
+.story-bridge-quote strong {
+  color: #24160E;
+  font-weight: 600;
 }
 
 /* Manifesto de Honestidade */
