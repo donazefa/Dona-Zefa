@@ -883,8 +883,9 @@
 /* Legenda Sutil sob o Celular */
 .story-media-caption {
   font-family: var(--font-sans);
-  font-size: 0.8rem;
-  color: #7A624E;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #5C4533;
   margin-top: var(--space-3);
   text-align: center;
   display: flex;
@@ -966,7 +967,7 @@
   align-items: center;
   gap: var(--space-2);
   font-family: var(--font-sans);
-  font-size: 0.78rem;
+  font-size: 0.84rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -977,58 +978,64 @@
 }
 
 .story-tag-video {
-  color: #7A624E;
-  background: rgba(120, 100, 85, 0.12);
-  border: 1px solid rgba(120, 100, 85, 0.28);
+  color: #6E533E;
+  background: rgba(120, 100, 85, 0.14);
+  border: 1px solid rgba(120, 100, 85, 0.32);
 }
 
 .story-tag-book {
   color: var(--color-primary-terracotta);
-  background: rgba(146, 54, 26, 0.10);
-  border: 1px solid rgba(146, 54, 26, 0.28);
+  background: rgba(146, 54, 26, 0.12);
+  border: 1px solid rgba(146, 54, 26, 0.32);
 }
 
 .story-headline {
   font-family: var(--font-display);
-  font-size: 1.55rem;
-  color: #24160E;
-  line-height: 1.28;
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: #1E120A;
+  line-height: 1.25;
   margin-bottom: var(--space-3);
 }
 
 @media (min-width: 768px) {
   .story-headline {
-    font-size: 1.75rem;
+    font-size: 1.95rem;
   }
 }
 
 .story-lead {
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-size: 1.14rem;
-  color: #7A3F29;
-  line-height: 1.5;
+  font-family: var(--font-sans);
+  font-style: normal;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #8F3419;
+  line-height: 1.45;
   margin-bottom: var(--space-3);
 }
 
 .story-text {
-  color: #4A382A;
-  font-size: 1.04rem;
-  line-height: 1.68;
-  margin-bottom: var(--space-4);
+  font-family: var(--font-sans);
+  color: #24160E;
+  font-size: 1.18rem;
+  font-weight: 500;
+  line-height: 1.7;
+  margin-bottom: var(--space-3);
 }
 
 /* Box de Observação Afetuosa (Ato 1) */
 .story-reflection-box {
-  background: rgba(236, 228, 216, 0.65);
-  border-left: 3px solid #C29038;
+  background: rgba(236, 228, 216, 0.85);
+  border-left: 4px solid #C29038;
   padding: var(--space-3) var(--space-4);
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-  font-family: var(--font-serif);
-  font-size: 1.02rem;
-  color: #5C4736;
-  font-style: italic;
+  font-family: var(--font-sans);
+  font-size: 1.12rem;
+  font-weight: 600;
+  font-style: normal;
+  color: #382417;
   line-height: 1.5;
+  margin-top: var(--space-2);
 }
 
 /* Pílulas de Benefício do Livro (Ato 2) */
@@ -1036,7 +1043,7 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-2);
-  margin-top: var(--space-2);
+  margin-top: var(--space-3);
 }
 
 .story-feature-item {
@@ -1044,14 +1051,14 @@
   align-items: center;
   gap: var(--space-2);
   font-family: var(--font-sans);
-  font-size: 0.94rem;
+  font-size: 1.08rem;
   font-weight: 600;
-  color: #382417;
+  color: #24160E;
 }
 
 .story-feature-item .feature-icon {
   color: var(--color-gold-leaf);
-  font-size: 0.9rem;
+  font-size: 1rem;
   flex-shrink: 0;
 }
 
@@ -1085,18 +1092,28 @@
 }
 
 .story-bridge-quote {
-  font-family: var(--font-serif);
-  font-size: 1.18rem;
-  font-style: italic;
+  font-family: var(--font-sans);
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 600;
   color: #7A3F29;
   max-width: 620px;
   margin: 0 auto;
-  line-height: 1.55;
+  line-height: 1.5;
 }
 
 .story-bridge-quote strong {
   color: #24160E;
-  font-weight: 600;
+  font-weight: 700;
+}
+
+#permanencia .subheadline {
+  font-family: var(--font-sans);
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #3A261A;
+  line-height: 1.6;
 }
 
 /* Manifesto de Honestidade */
