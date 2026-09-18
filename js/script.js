@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSmoothScroll();
   initCheckoutFlow();
   initScrollReveal();
+  initStickyCtaBar();
 });
 
 /**
@@ -170,3 +171,70 @@ function initScrollReveal() {
     revealElements.forEach((el) => el.classList.add('is-visible'));
   }
 }
+
+/**
+ * Barra Fixa / Flutuante de Checkout (Sticky CTA Bar)
+ * Surge no final da 2ª Seção (#identificacao) e se oculta ao visualizar a seção oficial de oferta (#oferta)
+ */
+function initStickyCtaBar() {
+  const stickyBar = document.getElementById('sticky-cta-bar');
+  const secondSection = document.getElementById('identificacao');
+  const thirdSection = document.getElementById('permanencia');
+  const offerSection = document.getElementById('oferta');
+
+  if (!stickyBar) return;
+
+  let isPastSecondSection = false;
+  let isOfferVisible = false;
+
+  // Observa a seção de oferta para recolher a barra quando o visitante estiver vendo a oferta principal
+  if (offerSection && 'IntersectionObserver' in window) {
+    const offerObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        isOfferVisible = entry.isIntersecting;
+        updateBarVisibility();
+      });
+    }, {
+      rootMargin: '-40px 0px -40px 0px',
+      threshold: 0.1
+    });
+
+    offerObserver.observe(offerSection);
+  }
+
+  function updateBarVisibility() {
+    if (secondSection) {
+      const rect = secondSection.getBoundingClientRect();
+      // Surge exatamente no final da segunda seção (quando o pergaminho/fim de #identificacao entra na tela)
+      isPastSecondSection = rect.bottom <= (window.innerHeight * 0.9);
+    } else if (thirdSection) {
+      const rect = thirdSection.getBoundingClientRect();
+      isPastSecondSection = rect.top <= (window.innerHeight * 0.75);
+    } else {
+      const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+      isPastSecondSection = scrollY > 800;
+    }
+
+    if (isPastSecondSection && !isOfferVisible) {
+      stickyBar.classList.add('is-active');
+      stickyBar.setAttribute('aria-hidden', 'false');
+    } else {
+      stickyBar.classList.remove('is-active');
+      stickyBar.setAttribute('aria-hidden', 'true');
+    }
+  }
+
+  let isScrolling = false;
+  window.addEventListener('scroll', () => {
+    if (!isScrolling) {
+      window.requestAnimationFrame(() => {
+        updateBarVisibility();
+        isScrolling = false;
+      });
+      isScrolling = true;
+    }
+  }, { passive: true });
+
+  updateBarVisibility();
+}
+
