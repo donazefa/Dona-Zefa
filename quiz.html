@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Descubra o que trava sua prosperidade | Dona Zefa</title>
+  <meta name="description" content="Um diagnóstico rápido e revelador de energia. Descubra o que pode estar travando a sua prosperidade.">
+  
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Estilos Globais e Específicos do Quiz -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/quiz.css">
+</head>
+<body>
+
+  <!-- Partículas/Fundo Animado -->
+  <div class="quiz-background">
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+    <div class="stars" id="stars-container"></div>
+  </div>
+
+  <main class="quiz-container">
+    
+    <!-- TELA 1: Boas Vindas -->
+    <section id="screen-welcome" class="quiz-screen active">
+      <div class="screen-content">
+        <div class="badge-gold">DIAGNÓSTICO ENERGÉTICO</div>
+        <h1 class="quiz-title">✨ Descubra o que pode estar <span class="highlight">travando a sua prosperidade</span></h1>
+        <p class="quiz-subtitle">Responda algumas perguntas rápidas sobre o seu momento atual e descubra qual padrão pode estar influenciando a sua relação com dinheiro, prosperidade e realização.</p>
+        <p class="quiz-note" style="color: var(--color-text-muted-on-dark); font-size: 0.9rem; margin-bottom: 2rem;">Não existem respostas certas ou erradas. Responda pensando em você.</p>
+        
+        <button class="quiz-btn btn-primary pulse-animation" onclick="startQuiz()">
+          COMEÇAR O QUIZ <span class="arrow">→</span>
+        </button>
+        <p class="quiz-timing">⏱️ Leva menos de 2 minutos</p>
+      </div>
+    </section>
+
+    <!-- TELAS DE PERGUNTAS -->
+    <section id="screen-questions" class="quiz-screen">
+      <div class="screen-content">
+        <div class="quiz-header">
+          <button class="btn-back" id="btn-back" onclick="goBack()" aria-label="Voltar">← Voltar</button>
+          <div class="question-counter" id="question-counter">Pergunta 1 de 12</div>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+        
+        <div class="question-wrapper" id="question-wrapper">
+          <h2 class="question-text" id="question-text">Pergunta aqui?</h2>
+          <div class="options-container" id="options-container">
+            <!-- Botões injetados via JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TELA DE TRANSIÇÃO (Intermediária) -->
+    <section id="screen-transition" class="quiz-screen">
+      <div class="screen-content">
+        <div class="transition-card">
+          <h2 class="quiz-title" id="transition-title">Interessante...</h2>
+          <p class="quiz-subtitle" id="transition-text" style="font-size: 1.2rem; color: var(--color-bg-linen-warm);">suas respostas já mostram alguns padrões importantes. ✨</p>
+          <button class="quiz-btn btn-primary mt-8" onclick="continueQuiz()">
+            CONTINUAR <span class="arrow">→</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- TELA DE PROCESSAMENTO -->
+    <section id="screen-processing" class="quiz-screen">
+      <div class="screen-content text-center">
+        <div class="processing-spinner">
+          <div class="spinner-ring"></div>
+          <div class="spinner-core"></div>
+        </div>
+        <h2 class="processing-text" id="processing-text">Analisando suas respostas...</h2>
+      </div>
+    </section>
+
+    <!-- TELA DE RESULTADO & LIVRO -->
+    <section id="screen-result" class="quiz-screen scrollable-screen">
+      <div class="screen-content">
+        
+        <div class="result-header">
+          <h2 class="quiz-title result-title" style="font-size: 2rem;">✨ Seu resultado ficou pronto</h2>
+          <p class="quiz-subtitle" style="font-size: 1.1rem; color: var(--color-bg-linen-warm);">Suas respostas mostram um padrão que merece a sua atenção.</p>
+        </div>
+        
+        <div class="result-card">
+          <div class="badge-gold">SEU PADRÃO PREDOMINANTE</div>
+          <h3 class="profile-name" id="profile-name">NOME DO PERFIL</h3>
+          <p class="result-text" id="profile-description" style="margin-top: 1rem;">
+            Você pode estar enfrentando uma dificuldade em romper determinados ciclos que acabam se repetindo na sua vida financeira. E talvez seja justamente por isso que apenas tentar ganhar mais dinheiro nem sempre parece resolver tudo.
+          </p>
+          <p class="result-text mt-4">
+            E existe uma outra parte dessa transformação que muitas pessoas acabam ignorando: <strong>a forma como você pensa, age e se relaciona com a prosperidade.</strong>
+          </p>
+        </div>
+
+        <div class="book-presentation mt-8">
+          <h3 class="book-title">Foi pensando justamente nisso que Dona Zefa criou este conteúdo. 📖</h3>
+          
+          <div class="book-image-container">
+            <img src="" id="book-cover-image" alt="Capa do Livro da Dona Zefa" class="book-cover">
+          </div>
+          
+          <p class="book-text">O livro da Dona Zefa reúne ensinamentos, reflexões e práticas para ajudar você a olhar de uma maneira diferente para sua relação com prosperidade, dinheiro e realização.</p>
+          <p class="book-text mt-4">Não se trata apenas de desejar uma vida melhor. É sobre começar a observar os padrões, pensamentos e comportamentos que fazem parte da sua caminhada.</p>
+        </div>
+
+        <button class="quiz-btn btn-primary pulse-animation mt-8" onclick="goToCheckout()" style="font-size: 1.1rem; padding: 1.2rem;">
+          QUERO CONHECER O LIVRO DA DONA ZEFA <span class="arrow">→</span>
+        </button>
+        
+        <div class="trust-badges">
+          <span>🔒 Compra segura</span>
+          <span>📱 Acesso digital</span>
+          <span>✨ Comece sua transformação</span>
+        </div>
+
+        <button class="btn-restart mt-6" onclick="restartQuiz()">↺ Refazer o quiz</button>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/quiz.js"></script>
+</body>
+</html>
